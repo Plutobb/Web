@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="apache-tomcat-8.5">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../javaKaiFa/apache-tomcat-8.5.54/apache-tomcat-8.5.54" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../javaKaiFa/apache-tomcat-8.5.54/apache-tomcat-8.5.54/webapps/docs/appdev/sample/src" />
+      <root url="file://$PROJECT_DIR$/../../javaKaiFa/apache-tomcat-8.5.54/apache-tomcat-8.5.54/webapps/examples/WEB-INF/classes" />
+      <root url="file://$PROJECT_DIR$/../../javaKaiFa/apache-tomcat-8.5.54/apache-tomcat-8.5.54/webapps/examples/WEB-INF/jsp/applet" />
+      <root url="file://$PROJECT_DIR$/../../javaKaiFa/apache-tomcat-8.5.54/apache-tomcat-8.5.54/webapps/examples/jsp/plugin/applet" />
+    </SOURCES>
+  </library>
+</component>
