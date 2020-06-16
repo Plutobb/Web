@@ -21,3 +21,11 @@ create table article(
                         create_time timestamp,
                         foreign key(user_id) references user(id)
 );
+
+insert into user (name, create_time) VALUES ('亚索',CURRENT_TIMESTAMP);
+insert into user (name, create_time) VALUES ('诺手',CURRENT_TIMESTAMP);
+
+insert into article(title, content, user_id, create_time) VALUES ('疾风剑豪','亚索',1,CURRENT_TIMESTAMP);
+insert into article(title, content, user_id, create_time) VALUES ('放逐之刃','瑞文',1,CURRENT_TIMESTAMP);
+insert into article(title, content, user_id, create_time) VALUES ('诺克萨斯','诺克萨斯之手',2,CURRENT_TIMESTAMP);
+
