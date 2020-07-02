@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.SimpleTimeZone;
 
 public class test {
+    private Date time;
     public static void main(String[] args) throws ParseException {
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
