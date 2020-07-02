@@ -13,7 +13,7 @@ public class ArmedPolice extends Policeman implements Policeman.Employee {
     @Override
     public void Raise(int n) {
         double endSalary = super.getSalary();
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n / 2; i++) {
             endSalary = endSalary * 1.3;
         }
         setSalary(endSalary);
@@ -26,7 +26,7 @@ public class ArmedPolice extends Policeman implements Policeman.Employee {
                 ", name='" + super.getName() + '\'' +
                 ", salary='" + super.getSalary() +'\'' +
                 ", years of service='" + super.getService_years() + '\'' +
-                "armyBelongs='" + armyBelongs + '\'' +
+                ", armyBelongs='" + armyBelongs + '\'' +
                 ", rank='" + rank + '\'' +
                 '}';
     }
@@ -34,7 +34,7 @@ public class ArmedPolice extends Policeman implements Policeman.Employee {
     public static void main(String[] args) throws ParseException {
         ArmedPolice ap = new ArmedPolice(10034,"成龙",3000,"2004-04-01","武警第七旅","第三警察主管");
         System.out.println(ap.toString());
-        ap.Raise(16);
+        ap.Raise(ap.getService_years());
         System.out.println(ap.toString());
     }
 }
