@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.util.*;
 
 public class ArithmeticExpression {
@@ -25,6 +22,18 @@ public class ArithmeticExpression {
         this.y = y;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getOperator() {
+        return operator;
+    }
+
     private double getResult() throws Exception {
         switch (operator){
             case 1 : this.fuHao = "+"; return x + y;
@@ -43,25 +52,28 @@ public class ArithmeticExpression {
 
     public static void main(String[] args) throws Exception {
         File file = new File("E:\\file\\out.txt");
-        //没有目录就创建;
-        if (!file.getParentFile().exists()){
-            file.getParentFile().mkdir();
-        }
-        //文件不存在就创建;
-        if (!file.exists()){
-            file.createNewFile();
-        }
-        OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream("E:\\file\\out.txt"),"GBK");
-        Random random = new Random();
-        for (int i = 0; i < 100; i++) {
-            int x = random.nextInt(500);
-            int y = random.nextInt(500)+1;
-            int operator = random.nextInt(4)+1;
-            ArithmeticExpression arithmeticExpression = new ArithmeticExpression(operator,x,y);
-            double ans = arithmeticExpression.getResult();
-            String str = x + ""+ arithmeticExpression.fuHao + y +" = " + ans + "\n";
-            osw.write(str);
-            osw.flush();
+        if (!file.exists()) {
+            if (!file.getParentFile().exists()){
+                file.getParentFile().mkdir();
+            }
+            OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream("E:\\file\\out.txt"),"GBK");
+            Random random = new Random();
+            for (int i = 0; i < 100; i++) {
+                int x = random.nextInt(500);
+                int y = random.nextInt(500) + 1;
+                int operator = random.nextInt(4) + 1;
+                ArithmeticExpression arithmeticExpression = new ArithmeticExpression(operator, x, y);
+                double ans = arithmeticExpression.getResult();
+                String str = x + " "+ arithmeticExpression.fuHao+" "+ y + " = " + ans + "\n";
+                osw.write(str);
+                osw.flush();
+            }
+        }else {
+            FileInputStream in = new FileInputStream(file);
+            byte[] bytes = new byte[2048];
+            int len = in.read(bytes);
+            String str = new String(bytes,0,len);
+            System.out.println(str);
         }
     }
 }
