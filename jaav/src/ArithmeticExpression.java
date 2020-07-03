@@ -4,16 +4,16 @@ import java.util.*;
 public class ArithmeticExpression {
     private int x;
     private int y;
-    private int operator;
+    private char operator;
     private String fuHao;
 
-    public ArithmeticExpression(int operator,int x,int y) throws Exception {
-        Map<Integer,String> map = new HashMap<>();
-        map.put(1,"+");
-        map.put(2,"-");
-        map.put(3,"*");
-        map.put(4,"/");
-        if (map.containsKey(operator)){
+    public ArithmeticExpression(char operator,int x,int y) throws Exception {
+        Set<Character> set = new HashSet<>();
+        set.add('+');
+        set.add('-');
+        set.add('*');
+        set.add('/');
+        if (set.contains(operator)){
             this.operator = operator;
         }else {
            throw new Exception("运算符错误");
@@ -30,16 +30,16 @@ public class ArithmeticExpression {
         return y;
     }
 
-    public int getOperator() {
+    public char getOperator() {
         return operator;
     }
 
     private double getResult() throws Exception {
         switch (operator){
-            case 1 : this.fuHao = "+"; return x + y;
-            case 2 : this.fuHao = "-"; return x - y;
-            case 3 : this.fuHao = "*"; return x * y;
-            case 4 :
+            case '+' : this.fuHao = "+"; return x + y;
+            case '-' : this.fuHao = "-"; return x - y;
+            case '*' : this.fuHao = "*"; return x * y;
+            case '/' :
                 if (y == 0){
                     throw new Exception("除数为0异常!");
                 }else {
@@ -61,7 +61,14 @@ public class ArithmeticExpression {
             for (int i = 0; i < 100; i++) {
                 int x = random.nextInt(500);
                 int y = random.nextInt(500) + 1;
-                int operator = random.nextInt(4) + 1;
+                int operator_num = random.nextInt(4) + 1;
+                char operator = '+';
+                switch (operator_num){
+                    case 1 : operator = '+';break;
+                    case 2 : operator = '-';break;
+                    case 3 : operator = '*';break;
+                    case 4 : operator = '/';break;
+                }
                 ArithmeticExpression arithmeticExpression = new ArithmeticExpression(operator, x, y);
                 double ans = arithmeticExpression.getResult();
                 String str = x + " "+ arithmeticExpression.fuHao+" "+ y + " = " + ans + "\n";
