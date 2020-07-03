@@ -5,7 +5,6 @@ public class ArithmeticExpression {
     private int x;
     private int y;
     private char operator;
-    private String fuHao;
 
     public ArithmeticExpression(char operator,int x,int y) throws Exception {
         Set<Character> set = new HashSet<>();
@@ -34,16 +33,15 @@ public class ArithmeticExpression {
         return operator;
     }
 
-    private double getResult() throws Exception {
+    double getResult() throws Exception {
         switch (operator){
-            case '+' : this.fuHao = "+"; return x + y;
-            case '-' : this.fuHao = "-"; return x - y;
-            case '*' : this.fuHao = "*"; return x * y;
+            case '+' :  return x + y;
+            case '-' :  return x - y;
+            case '*' :  return x * y;
             case '/' :
                 if (y == 0){
                     throw new Exception("除数为0异常!");
                 }else {
-                    this.fuHao = "/";
                     return (double) x / y;
                 }
         }
@@ -71,7 +69,7 @@ public class ArithmeticExpression {
                 }
                 ArithmeticExpression arithmeticExpression = new ArithmeticExpression(operator, x, y);
                 double ans = arithmeticExpression.getResult();
-                String str = x + " "+ arithmeticExpression.fuHao+" "+ y + " = " + ans + "\n";
+                String str = x + " "+ operator+" "+ y + " = " + ans + "\n";
                 osw.write(str);
                 osw.flush();
             }
