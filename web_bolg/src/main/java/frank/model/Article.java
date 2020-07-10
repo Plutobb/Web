@@ -1,14 +1,7 @@
 package frank.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 import java.util.Date;
 
-@Getter
-@Setter
-@ToString
 public class Article {
 
     private Integer id;
@@ -64,5 +57,17 @@ public class Article {
 
     public String getUserAccout() {
         return userAccout;
+    }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", userId=" + userId +
+                ", createTime=" + createTime +
+                ", userAccout='" + userAccout + '\'' +
+                '}';
     }
 }

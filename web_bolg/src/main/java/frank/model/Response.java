@@ -1,12 +1,6 @@
 package frank.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
-@Getter
-@Setter
-@ToString
 public class Response {//前端解析json字符串，统一的数据格式
 
     private boolean success;
@@ -44,5 +38,15 @@ public class Response {//前端解析json字符串，统一的数据格式
 
     public void setData(Object data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "Response{" +
+                "success=" + success +
+                ", message='" + message + '\'' +
+                ", stackTrace='" + stackTrace + '\'' +
+                ", data=" + data +
+                '}';
     }
 }
