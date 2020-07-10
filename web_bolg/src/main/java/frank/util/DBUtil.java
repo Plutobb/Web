@@ -10,7 +10,7 @@ import java.sql.Statement;
 
 public class DBUtil {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/blogdemo";
+    private static final String URL = "jdbc:mysql://localhost:3306/blogdemo?useUnicode=true&characterEncoding=UTF-8";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
 
