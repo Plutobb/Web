@@ -45,4 +45,8 @@ public class Student {
      * 创建时间
      */
     private Date createTime;
+    private String buildingId;
+    private String buildingName;
+    private String dormNo;
+
 }
