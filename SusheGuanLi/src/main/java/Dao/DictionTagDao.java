@@ -1,6 +1,6 @@
 package Dao;
 
-import model.Dictionary;
+import model.DictionaryTag;
 import util.DBUtil;
 
 import java.sql.Connection;
@@ -11,8 +11,8 @@ import java.util.List;
 
 public class DictionTagDao {
 
-    public static List<Dictionary> query(String key) {
-        List<Dictionary> list = new ArrayList<>();
+    public static List<DictionaryTag> query(String key) {
+        List<DictionaryTag> list = new ArrayList<>();
         Connection c =null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -27,9 +27,9 @@ public class DictionTagDao {
             ps.setString(1,key);
             rs = ps.executeQuery();
             while (rs.next()){
-                Dictionary tag = new Dictionary();
-                tag.setDictionaryKey(rs.getString("dictionary_tag_key"));
-                tag.setDictionaryValue(rs.getString("dictionary_tag_value"));
+                DictionaryTag tag = new DictionaryTag();
+                tag.setDictionaryTagKey(rs.getString("dictionary_tag_key"));
+                tag.setDictionaryTagValue(rs.getString("dictionary_tag_value"));
                 list.add(tag);
             }
         } catch (Exception e) {

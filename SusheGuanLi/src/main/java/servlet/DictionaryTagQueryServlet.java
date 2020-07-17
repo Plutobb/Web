@@ -1,7 +1,7 @@
 package servlet;
 
 import Dao.DictionTagDao;
-import model.Dictionary;
+import model.DictionaryTag;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +13,7 @@ public class DictionaryTagQueryServlet extends AbstractBaseServlet{
     @Override
     public Object process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         String key = req.getParameter("dictionaryKey");
-        List<Dictionary> tags = DictionTagDao.query(key);
+        List<DictionaryTag> tags = DictionTagDao.query(key);
         return tags;
     }
 }
