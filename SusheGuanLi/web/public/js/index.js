@@ -19,11 +19,11 @@ function resetConfirmPassword(){
     });
 }
 
-let dev = true;
-let devLoginData = {
-    username: "abc",
-    password: "123"
-};
+//let dev = false;
+// let devLoginData = {
+//     username: "abc",
+//     password: "123"
+// };
 
 $(function () {
     // $("#btn_to_register").hide();//如果要开放注册功能，打开注册按钮

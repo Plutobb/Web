@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class DBUtil {
     private static volatile DataSource DS;
 
-    private static final String URL = "jdbc:mysql://localhost:3306/stu_dorm";
+    private static final String URL = "jdbc:mysql://localhost:3306/stu_dorm?useUnicode=true&characterEncoding=UTF-8";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
 
@@ -48,6 +48,17 @@ public class DBUtil {
                 s.close();
             if (r != null)
                 r.close();
+        } catch (SQLException e) {
+            throw new RuntimeException("释放数据库资源失败!",e);
+        }
+    }
+
+    public static void Close(Connection c, Statement s){
+        try {
+            if (c != null)
+                c.close();
+            if (s != null)
+                s.close();
         } catch (SQLException e) {
             throw new RuntimeException("释放数据库资源失败!",e);
         }
