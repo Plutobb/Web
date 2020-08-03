@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test webSocket</title>
+</head>
+<body>
+
+    <input type="text" id="input">
+    <button onclick="send()">发送</button>
+
+    <script>
+        var webSocket = new WebSocket("ws://127.0.0.1:8080/GoBang/webSocketTest/200");
+
+        //建立连接成功后自动调用
+        webSocket.onopen = function () {
+            console.log("连接成功");
+        }
+
+        webSocket.onclose = function () {
+            console.log("连接失败");
+        }
+
+        webSocket.onerror = function () {
+            console.log("连接异常");
+        }
+
+        webSocket.onmessage = function () {
+            console.log("收到消息" + event.data);
+        }
+
+        function send() {
+            //把输入框中的内容通过websocket发送到服务器
+            //1.获取输入框中的内容
+            var input = document.getElementById("input");
+            //2.在通过websocket发送
+            //input 是一个输入框对象.value 就是输入框中的内容
+            console.log("发送数据:" + input.value);
+            webSocket.send(input.value);
+        }
+    </script>
+</body>
+</html>
