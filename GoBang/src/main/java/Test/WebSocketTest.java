@@ -8,7 +8,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 
 @ServerEndpoint(value = "/webSocketTest/{userId}")
-public class WebSocket {
+public class WebSocketTest {
     private int userId;
 
     //在客户端建立连接时使用
