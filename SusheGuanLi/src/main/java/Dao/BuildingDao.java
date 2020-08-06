@@ -13,7 +13,7 @@ public class BuildingDao {
 
     public static List<DictionaryTag> query() {
         List<DictionaryTag> list = new ArrayList<>();
-        Connection c =null;
+        Connection c = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {

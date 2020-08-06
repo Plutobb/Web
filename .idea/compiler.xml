@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Project_IDEA" />
+        <module name="chess" />
+        <module name="GoBang" />
+        <module name="susheguanli" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="chess" target="1.8" />
+      <module name="GoBang" target="1.8" />
+      <module name="Project_IDEA" target="1.5" />
+      <module name="susheguanli" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
