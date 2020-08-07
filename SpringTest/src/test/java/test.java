@@ -3,6 +3,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class test {
+
     @Test
     public void test1(){
         //使用Spring创建对象
@@ -19,5 +20,12 @@ public class test {
 
         //4.接下来就可以使用对象
         springTest.test();
+    }
+    @Test
+    public void t2(){
+        String config = "applicationContext.xml";
+        ApplicationContext ac = new ClassPathXmlApplicationContext(config);
+        student st = (student) ac.getBean("student");
+        System.out.println("student = "+st);
     }
 }

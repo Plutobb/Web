@@ -3,6 +3,19 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="test" class="SpringTest">
+
+    <!--1.set注入(设值注入)-->
+    <bean id="student" class="student"><!--先创建类-->
+        <property name="name" value="张三"/><!--利用set方法实现注入,类中必须含有set方法,否则出现异常-->
+        <property name="age" value="20"/>
+        <!--引用类型-->
+        <property name="school" ref="mySchool">
+        </property>
+    </bean>
+    <!--2.引用类型注入-->
+    <bean id="mySchool" class="school">
+        <property name="name" value="清华大学"/>
+        <property name="address" value="北京">
+        </property>
     </bean>
 </beans>
