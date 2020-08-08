@@ -5,15 +5,18 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--1.set注入(设值注入)-->
-    <bean id="student" class="student"><!--先创建类-->
+    <bean id="student" class="student" autowire="byName"><!--先创建类-->
         <property name="name" value="张三"/><!--利用set方法实现注入,类中必须含有set方法,否则出现异常-->
         <property name="age" value="20"/>
         <!--引用类型-->
-        <property name="school" ref="mySchool">
-        </property>
+        <!--<property name="school" ref="mySchool">
+        </property>-->
+        <!--引用类型自动注入
+        1.byName(按名称注入):Java类中引用类型的属性名和Spring容器中<bean>的id一致,且数据类型一样就可以实现自动注入,不再需要手动注入;
+        -->
     </bean>
     <!--2.引用类型注入-->
-    <bean id="mySchool" class="school">
+    <bean id="school" class="school">
         <property name="name" value="清华大学"/>
         <property name="address" value="北京">
         </property>
