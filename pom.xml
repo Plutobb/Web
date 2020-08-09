@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>SpringTest</module>
+        <module>Chess_Finish</module>
     </modules>
 
 
