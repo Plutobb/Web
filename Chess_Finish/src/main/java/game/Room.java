@@ -79,7 +79,7 @@ public class Room {
         chessBoard[row][col] = chess;
         // 可以把棋盘打印出来, 方便调试问题.
         printChessBoard();
-        // 2. TODO 检查游戏是否结束.
+        // 2.  检查游戏是否结束.
         int winner = checkWinner(row, col, chess);
         // 3. 把响应写回给客户端了
         //    需要给两个玩家都发送响应对象. 两个玩家发同一个对象即可.
