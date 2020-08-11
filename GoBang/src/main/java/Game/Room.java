@@ -183,15 +183,4 @@ public class Room {
         }
         return chess == 1 ? player1Id : player2Id;
     }
-    public static volatile Room Instance = null;
-    public static Room getInstance(){
-        if (Instance == null){
-            synchronized (Room.class){
-                if (Instance == null){
-                    Instance = new Room();
-                }
-            }
-        }
-        return Instance;
-    }
 }

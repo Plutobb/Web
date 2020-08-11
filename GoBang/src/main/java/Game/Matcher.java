@@ -62,7 +62,7 @@ public class Matcher {
                 return;
             }
             //3.将两个玩家加入到"房间"对象中;
-            Room room = Room.getInstance();
+            Room room = new Room();
             room.setPlayer1Id(player1.userId);
             room.setPlayer2Id(player2.userId);
             //4.将房间加入到RoomManager中;

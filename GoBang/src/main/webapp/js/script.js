@@ -38,7 +38,7 @@ function setScreenText(me) {
 // 初始化 websocket 
 //////////////////////////////////////////////////
 
-var websocket = new WebSocket("ws://127.0.0.1:8080/GoBang/game/" + gameInfo.userId);
+var websocket = new WebSocket("ws://39.99.133.224:8080/GoBang/game/" + gameInfo.userId);
 
 // 给 websocket 对象实现对应的方法
 websocket.onopen = function () {
@@ -121,7 +121,7 @@ function initGame() {
     context.strokeStyle = "#BFBFBF";
     // 背景图片
     var logo = new Image();
-    logo.src = "images/sky.jpeg";
+    logo.src = "images/apic287.jpg";
     logo.onload = function () {
         context.drawImage(logo, 0, 0, 450, 450);
         initChessBoard();
