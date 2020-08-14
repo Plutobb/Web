@@ -236,4 +236,4 @@ function initGame() {
 }
 
 // 应该在匹配成功后在绘制棋盘
- //initGame();
+//initGame();
