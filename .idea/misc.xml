@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/chess" />
+    <file type="web" url="file://$PROJECT_DIR$/Chess_Finish" />
     <file type="web" url="file://$PROJECT_DIR$/GoBang" />
     <file type="web" url="file://$PROJECT_DIR$/java15_chess" />
     <file type="web" url="file://$PROJECT_DIR$/SusheGuanLi" />

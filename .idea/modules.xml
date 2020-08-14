@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chess_Finish/Chess_Finish.iml" filepath="$PROJECT_DIR$/Chess_Finish/Chess_Finish.iml" />
       <module fileurl="file://$PROJECT_DIR$/GoBang/GoBang.iml" filepath="$PROJECT_DIR$/GoBang/GoBang.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Project_IDEA.iml" filepath="$PROJECT_DIR$/.idea/Project_IDEA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTest/SpringTest.iml" filepath="$PROJECT_DIR$/SpringTest/SpringTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/chess/chess.iml" filepath="$PROJECT_DIR$/chess/chess.iml" />
       <module fileurl="file://$PROJECT_DIR$/SusheGuanLi/susheguanli.iml" filepath="$PROJECT_DIR$/SusheGuanLi/susheguanli.iml" />
     </modules>

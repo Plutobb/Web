@@ -6,16 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Project_IDEA" />
-        <module name="chess" />
-        <module name="GoBang" />
         <module name="susheguanli" />
+        <module name="Chess_Finish" />
+        <module name="chess" />
+        <module name="SpringTest" />
+        <module name="GoBang" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="chess" target="1.8" />
+      <module name="Chess_Finish" target="1.8" />
       <module name="GoBang" target="1.8" />
       <module name="Project_IDEA" target="1.5" />
+      <module name="SpringTest" target="1.5" />
       <module name="susheguanli" target="1.8" />
     </bytecodeTargetLevel>
   </component>
