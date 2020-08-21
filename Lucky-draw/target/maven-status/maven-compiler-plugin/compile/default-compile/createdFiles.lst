@@ -1,0 +1,11 @@
+mopo\config\ExceptionAdvisor.class
+mopo\config\web\RequestResponseBodyMethodProcessorWrapper.class
+tool\SelectByConditionElementGenerator.class
+tool\DeleteByIdsElementGenerator.class
+mopo\base\BaseEntity.class
+tool\DefaultGeneratorPlugin.class
+tool\DefaultCommentGenerator.class
+mopo\base\BaseMapper.class
+mopo\Application.class
+mopo\config\SysConfig.class
+tool\Generator.class
