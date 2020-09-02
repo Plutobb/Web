@@ -72,7 +72,7 @@ set @email:='123@qq.com';
 
 set @building_name:='生楼-';
 set @building_desc:='修炼道场(⓿_⓿)';
-
+ 
 set @dorm_desc:='闭关之地( ఠൠఠ )ﾉ';
 
 set @dictionary_student_graduate_year='000001';
