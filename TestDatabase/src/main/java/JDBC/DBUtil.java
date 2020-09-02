@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class DBUtil {
     private static volatile DataSource DS;
 
-    private static final String URL = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8";
+    private static final String URL = "jdbc:mysql://localhost:3306/order_systeam?useUnicode=true&characterEncoding=UTF-8";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
 

@@ -7,11 +7,11 @@
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/test</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="@localhost" uuid="9a136aaf-919b-4203-bdbf-53b6134b5f28">
+    <data-source source="LOCAL" name="数据库课设" uuid="9a136aaf-919b-4203-bdbf-53b6134b5f28">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/order_systeam</jdbc-url>
     </data-source>
   </component>
 </project>
