@@ -53,11 +53,11 @@ Create table GoodsList
 );
 
 
-insert into customer(cname, ctel, caddr, ccom) values ('张洪宝','123456','西安','西安工程大学');
+insert into customer(cname, ctel, caddr, ccom) values ('迪迦','123456','M78','奥特曼');
 insert into bill(cnum, listnum,  paymethod) values (01,01,'支付宝');
 insert into goods(goodname, goodprice, goodstore) values ('牙膏',10,100);
 
-insert into customer(cname, ctel, caddr, ccom) values ('唐科','123456','西安','西安工程大学');
+insert into customer(cname, ctel, caddr, ccom) values ('赛文','123456','M78','奥特曼');
 insert into bill values (02,02,02,'支付宝');
 insert into goods values (02,'牙刷',15,100);
 

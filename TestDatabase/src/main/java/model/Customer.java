@@ -13,5 +13,4 @@ public class Customer {
     private String Ctel;
     private String Caddr;
     private String Ccom;
-    private String Listnum;
 }

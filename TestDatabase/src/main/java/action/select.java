@@ -214,6 +214,7 @@ public class select {
     public static void  selectByBillNum(){
         //输入要查询的发票号
         Scanner sc = new Scanner(System.in);
+        System.out.println("输入要查询的发票号:");
         int BillNum = sc.nextInt();
 
 

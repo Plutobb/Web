@@ -19,8 +19,14 @@ public class windows {
         System.out.println("=========================================");
         System.out.println("=========================================");
         System.out.println("请输入你的模块选择:");
-        Scanner sc = new Scanner(System.in);
-        int choice = sc.nextInt();
+        int choice = 0;
+        try {
+            Scanner sc = new Scanner(System.in);
+            choice = sc.nextInt();
+        } catch (Exception e) {
+            System.out.println("输入有误!请重新输入:");
+            menu();
+        }
         switch (choice){
             case 1 :    CustomerModule();menu(); break;
             case 2 :    ListModule();menu();break;
@@ -50,10 +56,7 @@ public class windows {
         switch (choice){
             case 1 :    action.select.selectByCustomerName();break;
             case 2 :    action.select.selectByCustomerNum();break;
-            case 3 :
-                System.out.println("在新建订单中可以增加客户及商品!");
-                ListModule();
-                break;
+            case 3 :    action.Build.BuildCustomer();break;
             default:
                 System.out.println("输入有误!请重新选择:");
                 CustomerModule();

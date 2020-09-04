@@ -153,7 +153,7 @@ public class Build {
 
     //建立完整的订单信息
     public static void BuildNewList(){
-        action.Build.BuildCustomer();
+      //  action.Build.BuildCustomer();
         action.Build.BuildBill();
         action.Build.BuildList();
         System.out.println("输入购买物品的种类个数:");
