@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 public class Bill {
     private int Billnum;
-    private int Cnum;
-    private String Paynum;
+    private String Cname;
+    private int ListNum;
     private String PayMethod;
 }

@@ -8,8 +8,8 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Goods {
-    private String Goodnum;
+    private int Goodnum;
     private String Goodname;
     private String Gprice;
-    private String Gstore;
+    private int Gstore;
 }
