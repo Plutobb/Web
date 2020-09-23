@@ -87,6 +87,7 @@ public class fibonacci {
                 min[j] = Math.min(min[j],min[j+1]) + length[i][j];//底下两个最小值加上此节点的值就是当前节点的最短路径长度.
             }
         }
+
         return min[0];
     }
     public static void main(String[] args) {
