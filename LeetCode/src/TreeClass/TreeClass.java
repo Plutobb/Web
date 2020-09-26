@@ -47,16 +47,33 @@ public class TreeClass {
         findModeHelp(root.right);
     }
 
+    public static List<List<Integer>> pathSum(TreeNode root, int sum) {
+        List<List<Integer>> pathSumAns = new LinkedList<>();
+        List<Integer> pathSumPart = new LinkedList<>();
+        findPathHelper(root,sum,pathSumPart,pathSumAns);
+        return pathSumAns;
+    }
+    public static void findPathHelper(TreeNode root,int sum,List<Integer> pathSumPart,List<List<Integer>> pathSumAns){
+        if (root == null){
+            return;
+        }
+        pathSumPart.add(root.val);
+        sum -= root.val;
+        if (root.right == null && root.left == null && sum == 0) {
+            pathSumAns.add(new LinkedList<>(pathSumPart));
+        }
+        findPathHelper(root.left,sum,pathSumPart,pathSumAns);
+        findPathHelper(root.right,sum,pathSumPart,pathSumAns);
+        pathSumPart.remove(pathSumPart.size()-1);
+    }
     public static void main(String[] args) {
-        TreeNode a = new TreeNode(1);
-        TreeNode b = new TreeNode(2);
-        TreeNode c = new TreeNode(2);
+        TreeNode a = new TreeNode(5);
+        TreeNode b = new TreeNode(4);
+        TreeNode c = new TreeNode(11);
         TreeNode d = new TreeNode(2);
-        TreeNode e = new TreeNode(2147483647);
         a.right = b;
         b.left = c;
-        a.left = d;
-        int[] ans = findMode(e);
-        System.out.println(Arrays.toString(ans));
+        c.left = d;
+        System.out.println(pathSum(a,22));
     }
 }
