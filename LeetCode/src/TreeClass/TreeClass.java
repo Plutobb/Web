@@ -1,8 +1,29 @@
 package TreeClass;
 
+import javax.security.auth.login.CredentialException;
 import java.util.*;
 
 public class TreeClass {
+    public static class Node {
+        public int val;
+        public Node left;
+        public Node right;
+        public Node next;
+
+        public Node() {}
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, Node _left, Node _right, Node _next) {
+            val = _val;
+            left = _left;
+            right = _right;
+            next = _next;
+        }
+    };
+
     public static class TreeNode{
         int val;
         TreeNode left;
@@ -103,6 +124,110 @@ public class TreeClass {
             return root;
         }
     }
+
+    public static Node connect(Node root) {
+        Queue<Node> queue = new ArrayDeque<>();
+        List<Node> list = new LinkedList<>();
+        if (root == null){
+            return null;
+        }
+        queue.add(root);
+        Node last = root;
+        Node nlast = root;
+        Node n = new Node(-1);
+        while (!queue.isEmpty()){
+            Node front = queue.poll();
+            list.add(front);
+            if (front.left != null){
+                queue.add(front.left);
+                nlast = front.left;
+            }
+            if (front.right != null){
+                queue.add(front.right);
+                nlast = front.right;
+            }
+            if (front == last){
+                list.add(n);
+                last = nlast;
+            }
+        }
+        for (int i = 0; i < list.size(); i++) {
+            if (i == list.size()-1){
+                Node node = list.get(i);
+                node.next = null;
+                break;
+            }
+           Node node = list.get(i);
+           Node next = list.get(i+1);
+           if (next != n){
+               node.next = next;
+           }
+        }
+        return root;
+    }
+    public static void cengXuBianLi(TreeNode root){
+        Queue<TreeNode> queue = new LinkedList<>();
+        if (root == null){
+            return ;
+        }
+        queue.add(root);
+        while (!queue.isEmpty()){
+            TreeNode front = queue.poll();
+            if (front.left != null){
+                queue.add(front.left);
+            }
+            if (front.right != null){
+                queue.add(front.right);
+            }
+            System.out.print(front.val);
+        }
+    }
+    public static void cengXuBianLiPrintByCeng(TreeNode root){
+        Queue<TreeNode> queue = new LinkedList<>();
+        TreeNode last = root;
+        TreeNode nlast = root;
+        if (root == null){
+            return;
+        }
+        queue.add(root);
+        while (!queue.isEmpty()){
+            TreeNode front = queue.poll();
+            System.out.print(front.val);
+            if (front.left != null){
+                queue.add(front.left);
+                nlast = front.left;
+            }
+            if (front.right != null){
+                queue.add(front.right);
+                nlast = front.right;
+            }
+            if (front == last){
+                System.out.println();
+                last = nlast;
+            }
+        }
+    }
+    public static void cengXuBianLiPrintByCengMethod2(TreeNode root){
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        if (root == null){
+            return;
+        }
+        queue.add(root);
+        while (!queue.isEmpty()){
+            int n = queue.size();
+            for (int i = 1; i <= n; i++) {
+                TreeNode cur = queue.poll();
+                System.out.print(cur.val);
+                if (cur.left != null){
+                    queue.add(cur.left);
+                }
+                if (cur.right != null){
+                    queue.add(cur.right);
+                }
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         TreeNode a = new TreeNode(6);
         TreeNode b = new TreeNode(2);
@@ -121,6 +246,6 @@ public class TreeClass {
         e.right = g;
         c.left = h;
         c.right = i;
-        System.out.println(lowestCommonAncestorMethod2(a,a,h));
+        cengXuBianLiPrintByCengMethod2(a);
     }
 }
