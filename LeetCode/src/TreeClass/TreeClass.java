@@ -228,6 +228,16 @@ public class TreeClass {
             System.out.println();
         }
     }
+    public static TreeNode insertIntoBST(TreeNode root, int val) {
+        if (root == null){
+            return null;
+        }
+        if (root.val < val){
+            insertIntoBST(root.right,val);
+        }else {
+            insertIntoBST(root.left,val);
+        }
+    }
     public static void main(String[] args) {
         TreeNode a = new TreeNode(6);
         TreeNode b = new TreeNode(2);
