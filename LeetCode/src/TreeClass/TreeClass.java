@@ -230,32 +230,55 @@ public class TreeClass {
     }
     public static TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null){
-            return null;
+            return new TreeNode(val);
+        }
+        insertIntoBSTHelper(root,val);
+        return root;
+    }
+    public static void insertIntoBSTHelper(TreeNode root,int val){
+        //节点插入右子树
+        if (root.val < val && root.right == null){
+            root.right = new TreeNode(val);
+            return;
+        }
+        //节点插入左子树
+        if (root.val > val && root.left == null){
+            root.left = new TreeNode(val);
+            return;
+        }
+        //节点相等情况
+        if (root.val == val){
+            TreeNode node = new TreeNode(val);
+            node.left = root.left;
+            root.left = node;
+            return;
         }
         if (root.val < val){
-            insertIntoBST(root.right,val);
-        }else {
-            insertIntoBST(root.left,val);
+            insertIntoBSTHelper(root.right,val);
+        }
+        if (root.val > val){
+            insertIntoBSTHelper(root.left, val);
         }
     }
     public static void main(String[] args) {
-        TreeNode a = new TreeNode(6);
-        TreeNode b = new TreeNode(2);
-        TreeNode c = new TreeNode(8);
+        TreeNode a = new TreeNode(2);
+        TreeNode b = new TreeNode(1);
+        TreeNode c = new TreeNode(3);
         TreeNode d = new TreeNode(0);
         TreeNode e = new TreeNode(4);
         TreeNode f = new TreeNode(3);
         TreeNode g = new TreeNode(5);
         TreeNode h = new TreeNode(7);
         TreeNode i = new TreeNode(9);
+        TreeNode o =
         a.left = b;
         a.right = c;
-        b.left = d;
-        b.right = e;
-        e.left = f;
-        e.right = g;
-        c.left = h;
-        c.right = i;
-        cengXuBianLiPrintByCengMethod2(a);
+//        b.left = d;
+//        b.right = e;
+//        e.left = f;
+//        e.right = g;
+//        c.left = h;
+//        c.right = i;
+        insertIntoBST(null,2);
     }
 }
