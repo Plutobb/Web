@@ -34,7 +34,7 @@ public class StringClass {
     //寻找最长中心子串--中心扩散法
 
 
-    //寻找宝石数量
+
     public static int NumJewelsInStones(String J, String S) {
         int ans = 0;
         Set<Character> set = new HashSet<>();
