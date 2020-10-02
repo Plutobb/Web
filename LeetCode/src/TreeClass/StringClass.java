@@ -1,6 +1,8 @@
 package TreeClass;
 
 import javax.security.auth.login.CredentialException;
+import java.util.HashSet;
+import java.util.Set;
 
 public class StringClass {
     //寻找最长子回文串;
@@ -30,7 +32,22 @@ public class StringClass {
         return true;
     }
     //寻找最长中心子串--中心扩散法
-    
+
+
+    //寻找宝石数量
+    public static int NumJewelsInStones(String J, String S) {
+        int ans = 0;
+        Set<Character> set = new HashSet<>();
+        for (int i = 0; i < J.length(); i++) {
+            set.add(J.charAt(i));
+        }
+        for (int i = 0; i <S.length() ; i++) {
+            if (set.contains(S.charAt(i))){
+                ans++;
+            }
+        }
+        return ans;
+    }
     public static void main(String[] args) {
         String string = "";
         System.out.println(longestPalindrome(string));
