@@ -19,18 +19,18 @@ public class StringClass {
         return "";
     }
     public static Boolean isHuiWen(String string,int left,int right){
-        if ("".equals(string)){
-            return true;
+        while (left <right){
+            if (string.charAt(left) != string.charAt(right)){
+                return false;
+            }else {
+                left++;
+                right--;
+            }
         }
-        if (left >= right){
-            return true;
-        }
-        if (string.charAt(left) == string.charAt(right)){
-            return isHuiWen(string, left+1, right-1);
-        }else {
-            return false;
-        }
+        return true;
     }
+    //寻找最长中心子串--中心扩散法
+    
     public static void main(String[] args) {
         String string = "";
         System.out.println(longestPalindrome(string));
