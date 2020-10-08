@@ -1,4 +1,4 @@
-package TreeClass;
+package StringClass;
 
 import javax.security.auth.login.CredentialException;
 import java.util.HashSet;
