@@ -1,5 +1,9 @@
 package ListClass;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
 public class HasCycle {
     static class ListNode {
         int val;
@@ -26,6 +30,19 @@ public class HasCycle {
             }
         }
         return false;
+    }
+
+    public static ListNode detectCycle(ListNode head) {
+        Set<ListNode> set = new HashSet<>();
+        while (head != null){
+            if (!set.contains(head)){
+                set.add(head);
+                head = head.next;
+            }else {
+                return head;
+            }
+        }
+        return null;
     }
 
     public static void main(String[] args) {
