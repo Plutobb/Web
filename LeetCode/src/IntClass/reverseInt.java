@@ -12,11 +12,11 @@ public class reverseInt {
             int yuShu = x % 10;
             x = x / 10;
             if (flag == 1) {
-                if ((Integer.MAX_VALUE - yuShu) / 10 < ans) {
+                if ((Integer.MAX_VALUE - yuShu) / 10 < ans && yuShu != 0) {
                     return 0;
                 }
             }else {
-                if ((Integer.MAX_VALUE - yuShu + 1) / 10 < ans){
+                if ((Integer.MAX_VALUE - yuShu + 1) / 10 < ans && yuShu != 0){
                     return 0;
                 }
             }
@@ -28,6 +28,6 @@ public class reverseInt {
     public static void main(String[] args) {
         System.out.println(Integer.MAX_VALUE);
         System.out.println(Integer.MIN_VALUE);
-        System.out.println(reverse(-1463847412));
+        System.out.println(reverse(-1000000));
     }
 }
