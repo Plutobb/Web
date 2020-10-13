@@ -2,8 +2,10 @@ package StringClass;
 
 import javax.security.auth.login.CredentialException;
 
+import static StringClass.Convert.convert;
+
 public class MyAtoi {
-    public static int myAtoi(String s) {
+    public int myAtoi(String s) {
         int i;
         int flag = 1;
         StringBuilder sb = new StringBuilder("");
@@ -57,7 +59,7 @@ public class MyAtoi {
     }
 
     public static void main(String[] args) {
-        String string = "2000000000000000000000";
-        System.out.println(myAtoi(string));
+        MyAtoi myAtoi = new MyAtoi();
+        System.out.println(myAtoi.myAtoi("20000000000"));
     }
 }
