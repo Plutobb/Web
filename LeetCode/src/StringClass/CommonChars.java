@@ -18,11 +18,11 @@ public class CommonChars {
             for (int j = 0; j < A[i].length(); j++) {
                 char ch = A[i].charAt(j);
                 if (list.contains(ch)){
-                    list.remove(list.indexOf(ch));
+                    list.remove(list.indexOf(ch));//这里好像出了bug,直接输入字符的时候还是按照下标删除,所以暂时采用这个方法;
                     tmpList.add(ch);
                 }
             }
-            list = new LinkedList<>(tmpList);
+            list = new LinkedList<>(tmpList);//不new新对象的话,只给的是引用,当tmpList.clear的时候也会清空list;
             tmpList.clear();
         }
         for (char c : list){
