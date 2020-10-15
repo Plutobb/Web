@@ -152,12 +152,14 @@ public class TreeClass {
             }
         }
         for (int i = 0; i < list.size(); i++) {
+            Node node = list.get(i);
             if (i == list.size()-1){
-                Node node = list.get(i);
                 node.next = null;
                 break;
             }
-           Node node = list.get(i);
+            if (node == n){
+                continue;
+            }
            Node next = list.get(i+1);
            if (next != n){
                node.next = next;
