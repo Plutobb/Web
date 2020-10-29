@@ -1,6 +1,5 @@
 package TreeClass;
 
-import javax.security.auth.login.CredentialException;
 import java.util.*;
 
 public class TreeClass {
@@ -262,6 +261,21 @@ public class TreeClass {
             insertIntoBSTHelper(root.left, val);
         }
     }
+    public static List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> ans = new LinkedList<>();
+        preorderTraversalHelp(root,ans);
+        return ans;
+    }
+
+    private static void preorderTraversalHelp(TreeNode root, List<Integer> ans) {
+        if (root == null){
+            return;
+        }
+        ans.add(root.val);
+        preorderTraversalHelp(root.left,ans);
+        preorderTraversalHelp(root.right,ans);
+    }
+
     public static void main(String[] args) {
         TreeNode a = new TreeNode(2);
         TreeNode b = new TreeNode(1);
@@ -272,15 +286,15 @@ public class TreeClass {
         TreeNode g = new TreeNode(5);
         TreeNode h = new TreeNode(7);
         TreeNode i = new TreeNode(9);
-        TreeNode o =
         a.left = b;
         a.right = c;
-//        b.left = d;
-//        b.right = e;
-//        e.left = f;
-//        e.right = g;
-//        c.left = h;
-//        c.right = i;
-        insertIntoBST(null,2);
+        b.left = d;
+        b.right = e;
+        e.left = f;
+        e.right = g;
+        c.left = h;
+        c.right = i;
+     //   insertIntoBST(null,2);
+        System.out.println(preorderTraversal(a));
     }
 }
