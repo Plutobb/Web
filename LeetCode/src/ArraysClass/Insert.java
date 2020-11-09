@@ -66,6 +66,7 @@ public class Insert {
         return ansList.toArray(ans);
     }
 
+
     public static void main(String[] args) {
         int[][] arr1 = {{1,2},{3,5},{6,7},{8,10},{12,16}};
         int[][] a = {{1,5}};
