@@ -182,6 +182,5 @@ public class myFrame extends JFrame {
         contentPane.add(label3333);
         contentPane.add(textField3333);
 
-
     }
 }

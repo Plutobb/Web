@@ -39,22 +39,22 @@ public class CatchPacket implements PacketReceiver,Runnable
         {
             sb.append("设备接口:" + (i + 1) + "\n");
             arr[1]=(i + 1)+"";
-            sb.append("网络接口名称:" + devices[1].name+"\n");
-            arr1[2]=devices[1].name+"";
+            sb.append("网络接口名称:" + devices[i].name+"\n");
+            arr1[2]=devices[i].name+"";
             // 选中一个网卡接口进行监听
-            if (!(devices[1].name.contains("GenericDialupAdapter")))
+            //if (!(devices[1].name.contains("GenericDialupAdapter")))
             {
-               device = devices[1];
+               device = devices[2];
 
             }
-            sb.append("网络接口描述:" + devices[1].description+"\n");
-            arr1[3]=devices[1].description+"";
-            sb.append("数据链路层描述:" + devices[1].datalink_name+"\n");
-            arr1[4]=devices[1].datalink_name;
-            sb.append("数据链路层描述:" + devices[1].datalink_description+"\n");
-            arr1[5]=devices[1].datalink_description;
-            sb.append("是否是LOOPBACK设备:" + devices[1].loopback+"\n");
-            arr1[6]=devices[1].loopback+"";
+            sb.append("网络接口描述:" + devices[i].description+"\n");
+            arr1[3]=devices[i].description+"";
+            sb.append("数据链路层描述:" + devices[i].datalink_name+"\n");
+            arr1[4]=devices[i].datalink_name;
+            sb.append("数据链路层描述:" + devices[i].datalink_description+"\n");
+            arr1[5]=devices[i].datalink_description;
+            sb.append("是否是LOOPBACK设备:" + devices[i].loopback+"\n");
+            arr1[6]=devices[i].loopback+"";
             sb.append("MAC地址:");
             /*
             int flag = 0;
@@ -225,6 +225,7 @@ public class CatchPacket implements PacketReceiver,Runnable
             arr[10] = iPacket.dst_ip.toString();
             sb.append("Options(选项):" + iPacket.option + "\r\n");
             arr[11] = iPacket.option + "";
+            System.out.println(iPacket);
             sb.append("------------------\r\n");
         }
 
@@ -261,6 +262,7 @@ public class CatchPacket implements PacketReceiver,Runnable
             arr2[11]=tPacket.urgent_pointer+"";
             sb.append("Option(选项):" + tPacket.option + "\r\n");
             arr2[12]=tPacket.option+"";
+            System.out.println(tPacket);
             sb.append("------------------\r\n");
         }
 
@@ -277,7 +279,7 @@ public class CatchPacket implements PacketReceiver,Runnable
             sb.append("Length:"+uPacket.length+"\n");
             arr3[2]=uPacket.length+"";
             sb.append("------------------\n");
-
+            System.out.println(uPacket);
         }
 
 
@@ -337,11 +339,14 @@ public class CatchPacket implements PacketReceiver,Runnable
     public static void main(String[] args)
     {
         CatchPacket cPacket = new CatchPacket();
+        //获取所有的网络接口
         cPacket.devices = cPacket.getDevices();
+        //打印出网络接口,选择需要抓包的接口
         cPacket.desNetworkInterface();
+        //打开网络接口
         cPacket.getCap(cPacket.device, true, "");
+        //创建线程开始抓包
         Thread thread = new Thread(cPacket);
-        sb.delete(0, sb.length());
         thread.start();
 
         try {
