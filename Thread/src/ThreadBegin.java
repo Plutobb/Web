@@ -17,9 +17,28 @@ public class ThreadBegin {
             System.out.println("继承Runnable接口创建的线程");
         }
     }
+    //匿名内部类创建线程
+    public static void myThreadNiMing(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("匿名内部类方法创建线程"+Thread.currentThread().getName());
+            }
+        }).start();
+    }
+
+    //lambda表达式创建线程
+    public static void myThreadLambda(){
+        new Thread(()->{
+            System.out.println("lambda表达式方法创建线程"+Thread.currentThread().getName());
+        }).start();
+    }
 
     public static void main(String[] args) {
-        MyThread1 myThread1 = new MyThread1();
-        myThread1.run();
+//        MyThread1 myThread1 = new MyThread1();
+//        Thread thread = new Thread(myThread1);
+//        thread.start();
+        myThreadLambda();
+        myThreadNiMing();
     }
 }
