@@ -4,13 +4,29 @@ public class ThreadControl {
 
         @Override
         public void run() {
-            System.out.println("线程启动了!");
+            try {
+                //System.out.println("线程启动了!");
+                System.out.println("begin time = " + System.currentTimeMillis());
+                Thread.sleep(2000);
+                System.out.println("end time = " + System.currentTimeMillis());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    static class MyThread1 implements Runnable{
+
+        @Override
+        public void run() {
+            for (int i = 0; i < 50000; i++) {
+                System.out.println("i = " + i);
+            }
         }
     }
     //线程启动
     public static void startThread(){
-        MyThread myThread = new MyThread();
-        Thread thread = new Thread(myThread);
+        MyThread1 myThread1 = new MyThread1();
+        Thread thread = new Thread(myThread1);
         thread.start();
     }
     //线程名称设置和获取
@@ -22,8 +38,13 @@ public class ThreadControl {
         //通过getName()方法获取线程名字
         System.out.println("线程名字:"+thread.getName());
     }
-    public static void main(String[] args) {
-        //startThread();
-        getAndSetThreadName();
+    public static void main(String[] args) throws InterruptedException {
+        MyThread1 myThread1 = new MyThread1();
+        Thread thread = new Thread(myThread1);
+        thread.start();
+        Thread.sleep(2);
+        thread.interrupt();
+        System.out.println("线程中断标志1 :" + thread.isInterrupted());
+        System.out.println("线程中断标志2 :" + thread.isInterrupted());
     }
 }
