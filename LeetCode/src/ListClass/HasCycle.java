@@ -1,6 +1,5 @@
 package ListClass;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ public class HasCycle {
             val = x;
             next = null;
       }
-  }
+    }
     //判断链表中是否有环;
     public static boolean hasCycle(ListNode head) {
         //采用快慢指针的方法;

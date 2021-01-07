@@ -15,12 +15,16 @@ public class ThreadControl {
         }
     }
     static class MyThread1 implements Runnable{
-
         @Override
         public void run() {
-            for (int i = 0; i < 50000; i++) {
-                System.out.println("i = " + i);
+            long beginTime = System.currentTimeMillis();
+            int count = 0;
+            for (int i = 0; i < 5000000; i++) {
+                Thread.yield();
+                count += i;
             }
+            long endTime = System.currentTimeMillis();
+            System.out.println("任务用时:" + (endTime - beginTime)+"毫秒");
         }
     }
     //线程启动
@@ -42,9 +46,5 @@ public class ThreadControl {
         MyThread1 myThread1 = new MyThread1();
         Thread thread = new Thread(myThread1);
         thread.start();
-        Thread.sleep(2);
-        thread.interrupt();
-        System.out.println("线程中断标志1 :" + thread.isInterrupted());
-        System.out.println("线程中断标志2 :" + thread.isInterrupted());
     }
 }
