@@ -1,35 +1,49 @@
 public class ThreadControl {
     //线程类继承Runnable接口
     static class MyThread implements Runnable{
+        private int count = 0;
 
+        public int getCount(){
+            return count;
+        }
         @Override
         public void run() {
-            try {
-                //System.out.println("线程启动了!");
+            //System.out.println("线程启动了!");
 //                System.out.println("begin time = " + System.currentTimeMillis());
 //                Thread.sleep(2000);
 //                System.out.println("end time = " + System.currentTimeMillis());
-                System.out.println("线程1开始运行");
-                Thread.sleep(2000);
-                System.out.println("线程1运行结束");
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+//                System.out.println("线程1开始运行");
+//                Thread.sleep(2000);
+//                System.out.println("线程1运行结束");
+//            for (int i = 0; i < 50000; i++) {
+//                System.out.println("A---" + i);
+//            }
+            while (true){
+                count++;
             }
         }
     }
     static class MyThread1 implements Runnable{
+        private int count = 0;
+
+        public int getCount(){
+            return count;
+        }
         @Override
         public void run() {
-//            long beginTime = System.currentTimeMillis();
-//            int count = 0;
-//            for (int i = 0; i < 5000000; i++) {
-//                Thread.yield();
-//                count += i;
+            //System.out.println("线程启动了!");
+//                System.out.println("begin time = " + System.currentTimeMillis());
+//                Thread.sleep(2000);
+//                System.out.println("end time = " + System.currentTimeMillis());
+//                System.out.println("线程1开始运行");
+//                Thread.sleep(2000);
+//                System.out.println("线程1运行结束");
+//            for (int i = 0; i < 50000; i++) {
+//                System.out.println("A---" + i);
 //            }
-//            long endTime = System.currentTimeMillis();
-//            System.out.println("任务用时:" + (endTime - beginTime)+"毫秒");
-            System.out.println("线程2开始运行");
-            System.out.println("线程2结束运行");
+            while (true){
+                count++;
+            }
         }
     }
     //线程启动
@@ -49,13 +63,19 @@ public class ThreadControl {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        MyThread1 myThread1 = new MyThread1();
         MyThread myThread = new MyThread();
         Thread thread = new Thread(myThread);
-        Thread thread1 = new Thread(myThread1);
+        thread.setPriority(1);
         thread.start();
-        Thread.sleep(1000);
+
+        MyThread1 myThread1 = new MyThread1();
+        Thread thread1 = new Thread(myThread1);
+        thread1.setPriority(10);
         thread1.start();
-        //thread1.join();
+
+        Thread.sleep(2000);
+
+        System.out.println("thread = " + myThread.getCount());
+        System.out.println("thread1 = " + myThread1.getCount());
     }
 }
