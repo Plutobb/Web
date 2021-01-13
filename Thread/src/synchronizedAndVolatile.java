@@ -1,16 +1,21 @@
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class synchronizedAndVolatile {
-    public static int i = 0;
+    public static  int i = 0;
+    static Lock lock = new ReentrantLock();
 
     static class MyThread implements Runnable{
+
         @Override
-        public void run() {
+        public  void run() {
             for (int i = 0; i < 10000; i++) {
                 numSum();
             }
         }
     }
 
-    public synchronized static void numSum(){
+    public static void numSum(){
         i++;
     }
 
@@ -24,7 +29,7 @@ public class synchronizedAndVolatile {
         t2.start();
 
 
-        Thread.sleep(3000);
+        Thread.sleep(4000);
 
         System.out.println(i);
     }
