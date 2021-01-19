@@ -25,6 +25,7 @@ public class synchronizedAndVolatile {
         Thread t1 = new Thread(myThread);
         t1.start();
 
+
         Thread t2 = new Thread(myThread);
         t2.start();
 
