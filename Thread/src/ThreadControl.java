@@ -1,3 +1,5 @@
+import java.util.concurrent.Semaphore;
+
 public class ThreadControl {
     //线程类继承Runnable接口
     static class MyThread implements Runnable{
@@ -61,21 +63,46 @@ public class ThreadControl {
         //通过getName()方法获取线程名字
         System.out.println("线程名字:"+thread.getName());
     }
+    //通过信号量Semaphore来控制进入资源的线程数量
+    public static void threadNumControl(){
+        //Semaphore 中的参数就是最大容纳的信号量,也就是线程数.
+        Semaphore semaphore = new Semaphore(2);
+        for (int i = 0; i < 5; i++) {
+            new Thread(()->{
+                try {
+                    //通过调用请求来获取信号量,每次acquire预设值就-1.
+                    semaphore.acquire();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("线程" + Thread.currentThread().getName()+"启动");
+                try {
+                    Thread.sleep(2000);
+                    //通过release来释放信号量,释放后预设值就+1.
+                    semaphore.release();
+                    System.out.println("线程" + Thread.currentThread().getName()+"退出");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }).start();
+        }
+    }
 
     public static void main(String[] args) throws InterruptedException {
-        MyThread myThread = new MyThread();
-        Thread thread = new Thread(myThread);
-        thread.setPriority(1);
-        thread.start();
-
-        MyThread1 myThread1 = new MyThread1();
-        Thread thread1 = new Thread(myThread1);
-        thread1.setPriority(10);
-        thread1.start();
-
-        Thread.sleep(2000);
-
-        System.out.println("thread = " + myThread.getCount());
-        System.out.println("thread1 = " + myThread1.getCount());
+//        MyThread myThread = new MyThread();
+//        Thread thread = new Thread(myThread);
+//        thread.setPriority(1);
+//        thread.start();
+//
+//        MyThread1 myThread1 = new MyThread1();
+//        Thread thread1 = new Thread(myThread1);
+//        thread1.setPriority(10);
+//        thread1.start();
+//
+//        Thread.sleep(2000);
+//
+//        System.out.println("thread = " + myThread.getCount());
+//        System.out.println("thread1 = " + myThread1.getCount());
+        threadNumControl();
     }
 }
