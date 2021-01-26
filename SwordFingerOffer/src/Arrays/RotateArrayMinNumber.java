@@ -20,4 +20,5 @@ public class RotateArrayMinNumber {
             2.当旋转后mid == low == high时这时就没办法使用指针寻找了,需要退而求次,使用顺序查找.
 
     */
+    
 }
