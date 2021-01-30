@@ -3,7 +3,6 @@ import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class ThreadPool {
 
@@ -31,7 +30,9 @@ public class ThreadPool {
         ScheduledExecutorService sChePool = Executors.newScheduledThreadPool(1);
         for (int i = 0; i < 3; i++) {
             //延迟0秒,每隔5秒任务周期执行.
-            sChePool.scheduleWithFixedDelay(getThread(i),0,5, TimeUnit.SECONDS);
+            singlePool.submit(getThread(i));
+            //sChePool.scheduleWithFixedDelay(getThread(i),0,5, TimeUnit.SECONDS);
         }
+        singlePool.shutdown();
     }
 }
