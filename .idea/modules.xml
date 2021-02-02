@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BTB/BTB.iml" filepath="$PROJECT_DIR$/BTB/BTB.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CatchPacket/CatchPacket.iml" filepath="$PROJECT_DIR$/CatchPacket/CatchPacket.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ChatRoomDemo/ChatRoomDemo.iml" filepath="$PROJECT_DIR$/ChatRoomDemo/ChatRoomDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Thread/DataBaseTest.iml" filepath="$PROJECT_DIR$/Thread/DataBaseTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IOTest/IOTest.iml" filepath="$PROJECT_DIR$/IOTest/IOTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TCP/IP/TCP/IP.iml" filepath="$PROJECT_DIR$/TCP/IP/TCP/IP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JVM/JVM.iml" filepath="$PROJECT_DIR$/JVM/JVM.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PacketCatch/PacketCatch.iml" filepath="$PROJECT_DIR$/PacketCatch/PacketCatch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/Project_IDEA.iml" filepath="$PROJECT_DIR$/.idea/Project_IDEA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SwordFingerOffer/SwordFingerOffer.iml" filepath="$PROJECT_DIR$/SwordFingerOffer/SwordFingerOffer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TCP_UDP/TCP_UDP.iml" filepath="$PROJECT_DIR$/TCP_UDP/TCP_UDP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TestCode/TestCode.iml" filepath="$PROJECT_DIR$/TestCode/TestCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project_IDEA.iml" filepath="$PROJECT_DIR$/Project_IDEA.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestDatabase/TestDatabase.iml" filepath="$PROJECT_DIR$/TestDatabase/TestDatabase.iml" />
       <module fileurl="file://$PROJECT_DIR$/Thread/Thread.iml" filepath="$PROJECT_DIR$/Thread/Thread.iml" />
     </modules>
