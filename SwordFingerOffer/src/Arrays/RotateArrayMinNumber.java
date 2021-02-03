@@ -20,5 +20,45 @@ public class RotateArrayMinNumber {
             2.当旋转后mid == low == high时这时就没办法使用指针寻找了,需要退而求次,使用顺序查找.
 
     */
-    
+    public int minNumberInRotateArray(int [] array) {
+        /*
+        三种情况：
+        （1）把前面0个元素搬到末尾，也就是排序数组本身，第一个就是最小值
+        （2）一般情况二分查找，当high-low=1时，high就是最小值
+        （3）如果首尾元素和中间元素都相等时，只能顺序查找
+        */
+        int len=array.length;
+        if(len==0) {
+            return 0;
+        }
+        int low=0,high=len-1;
+        if(array[low]<array[high]){
+            //排序数组本身
+            return array[low];
+        }
+        while(low<high){
+            int mid=low+(high-low)/2;
+            if(array[low]==array[mid] && array[high]==array[mid]) {
+                return minInOrder(array);
+            }
+            if(array[mid]>=array[low]) {
+                low=mid;
+            } else if(array[mid]<=array[high]) {
+                high=mid;
+            }
+            if(high-low==1) {
+                return array[high];
+            }
+        }
+        return -1;
+    }
+    public int minInOrder(int [] array) { //顺序查找
+        int min=array[0];
+        for(int num:array){
+            if(num<min) {
+                min=num;
+            }
+        }
+        return min;
+    }
 }
