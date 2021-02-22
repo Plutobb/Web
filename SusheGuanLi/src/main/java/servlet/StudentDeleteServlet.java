@@ -1,6 +1,6 @@
 package servlet;
 
-import Dao.StudentDAO;
+import dao.StudentDAO;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;

@@ -1,6 +1,6 @@
 package servlet;
 
-import Dao.StudentDAO;
+import dao.StudentDAO;
 import model.Student;
 
 import javax.servlet.annotation.WebServlet;

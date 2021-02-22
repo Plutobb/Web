@@ -1,4 +1,4 @@
-package Dao;
+package dao;
 
 import model.Student;
 import util.DBUtil;

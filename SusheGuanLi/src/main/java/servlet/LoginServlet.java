@@ -1,6 +1,6 @@
 package servlet;
 
-import Dao.UserDao;
+import dao.UserDao;
 import model.User;
 import util.JSONUtil;
 

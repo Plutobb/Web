@@ -1,6 +1,6 @@
 package servlet;
 
-import Dao.DictionTagDao;
+import dao.DictionTagDao;
 import model.DictionaryTag;
 
 import javax.servlet.annotation.WebServlet;
