@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../javaKaiFa/M2Repository/mysql/mysql-connector-java/5.1.4/mysql-connector-java-5.1.4-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../javaKaiFa/M2Repository/mysql/mysql-connector-java/8.0.19" />
     </SOURCES>
   </library>
 </component>

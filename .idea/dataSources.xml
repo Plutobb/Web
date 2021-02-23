@@ -13,5 +13,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/stu_dorm</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="用户信息管理系统" uuid="dc4cc12f-badd-445b-bcd5-f94fea1a9ae2">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/user_system</jdbc-url>
+    </data-source>
   </component>
 </project>

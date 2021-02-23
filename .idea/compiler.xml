@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MyWeb01" />
         <module name="Project_IDEA" />
         <module name="TestDatabase" />
         <module name="susheguanli" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="MyWeb01" target="1.5" />
       <module name="Project_IDEA" target="1.5" />
       <module name="susheguanli" target="1.8" />
       <module name="TestDatabase" target="1.5" />
