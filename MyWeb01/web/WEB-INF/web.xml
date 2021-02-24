@@ -11,4 +11,21 @@
         <servlet-name>user_Add</servlet-name>
         <url-pattern>/user/add</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>userFind</servlet-name>
+        <servlet-class>Servlet.userFind</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userDeleteServlet</servlet-name>
+        <servlet-class>Servlet.userDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userDeleteServlet</servlet-name>
+        <url-pattern>/user/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userFind</servlet-name>
+        <url-pattern>/user/find</url-pattern>
+    </servlet-mapping>
 </web-app>

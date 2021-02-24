@@ -1,21 +1,21 @@
 package entity;
 
 public class User {
-    private String id;
+    private Integer id;
     private String name;
     private String password;
 
-    public User(String id, String name, String password) {
+    public User(Integer id, String name, String password) {
         this.id = id;
         this.name = name;
         this.password = password;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
