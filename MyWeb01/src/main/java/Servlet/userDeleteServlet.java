@@ -21,11 +21,12 @@ public class userDeleteServlet extends HttpServlet {
         int rs = dao.delete(Integer.parseInt(userId));
 
         response.setContentType("text/html;charset=utf-8");
+        response.setCharacterEncoding("utf-8");
         PrintWriter pw = response.getWriter();
         if (rs == 0){
             pw.print("<a>用户信息删除失败！</a>");
         }else {
-            pw.print("<a>用户信息删除chenggong！</a>");
+            pw.print("<a>用户信息删除成功！</a>");
         }
     }
 }
