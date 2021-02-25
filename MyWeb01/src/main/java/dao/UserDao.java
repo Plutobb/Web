@@ -62,11 +62,43 @@ public class UserDao {
     public int delete(int userId) throws SQLException {
         Connection c = null;
         PreparedStatement ps = null;
+        int rs = 0;
 
-        c = DBUtil.getConnection();
-        String sql = "delete from users where users_id = ?;";
-        ps = c.prepareStatement(sql);
-        ps.setInt(1,userId);
-        return ps.executeUpdate();
+        try {
+            c = DBUtil.getConnection();
+            String sql = "delete from users where users_id = ?;";
+            ps = c.prepareStatement(sql);
+            ps.setInt(1,userId);
+            rs = ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            DBUtil.Close(c,ps);
+        }
+
+        return rs;
+    }
+
+    public Boolean login(String name,String password) throws SQLException {
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        boolean login = false;
+
+        try {
+            c = DBUtil.getConnection();
+            String sql = "select users_id from users where users_name = ? and users_password = ?;";
+            ps = c.prepareStatement(sql);
+            ps.setString(1,name);
+            ps.setString(2,password);
+            rs = ps.executeQuery();
+            login = rs.next();
+        } catch (SQLException throwables) {
+            System.out.println("用户登录错误!");
+            throwables.printStackTrace();
+        } finally {
+            DBUtil.Close(c,ps,rs);
+        }
+        return login;
     }
 }

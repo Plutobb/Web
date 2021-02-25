@@ -16,6 +16,20 @@
         <servlet-name>userFind</servlet-name>
         <servlet-class>Servlet.userFind</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>userFind</servlet-name>
+        <url-pattern>/user/find</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>userLogin</servlet-name>
+        <servlet-class>Servlet.userLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userLogin</servlet-name>
+        <url-pattern>/user/login</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>userDeleteServlet</servlet-name>
         <servlet-class>Servlet.userDeleteServlet</servlet-class>
@@ -24,8 +38,5 @@
         <servlet-name>userDeleteServlet</servlet-name>
         <url-pattern>/user/delete</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>userFind</servlet-name>
-        <url-pattern>/user/find</url-pattern>
-    </servlet-mapping>
+
 </web-app>
