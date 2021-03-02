@@ -11,9 +11,9 @@ public class endServlet extends HttpServlet {
         String userName=null,balance = null,choice;
         Cookie[] set = request.getCookies();
         for (Cookie cookie : set){
-            if (cookie.getName() == "userName"){
+            if ("userName".equals(cookie.getName())){
                 userName = cookie.getValue();
-            }else if (cookie.getName() == "balance"){
+            }else if ("balance".equals(cookie.getName())){
                 balance = cookie.getValue();
             }
         }
@@ -21,6 +21,10 @@ public class endServlet extends HttpServlet {
         System.out.println(userName);
         System.out.println(balance);
 
-        choice = request.getParameter("jiaoZi");
+        System.out.println(balance + "1" );
+
+        Cookie card = new Cookie("balance","20");
+        response.addCookie(card);
+
     }
 }
