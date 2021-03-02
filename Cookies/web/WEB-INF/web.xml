@@ -7,6 +7,14 @@
         <servlet-name>beginServlet</servlet-name>
         <servlet-class>beginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>endServlet</servlet-name>
+        <servlet-class>endServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>endServlet</servlet-name>
+        <url-pattern>/index2</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>beginServlet</servlet-name>
         <url-pattern>/index</url-pattern>

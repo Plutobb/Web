@@ -19,5 +19,6 @@ public class beginServlet extends HttpServlet {
         response.addCookie(card1);
         response.addCookie(card2);
 
+        request.getRequestDispatcher("/myWeb/index2.html").forward(request,response);
     }
 }
