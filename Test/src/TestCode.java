@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class TestCode {
     public static void moveNum(int[] arr){
@@ -28,9 +30,16 @@ public class TestCode {
         System.out.println(Arrays.toString(arr2));
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6};
-        int[] arr2 = {1,2,3};
-        changeArrays(arr,arr2);
+        Scanner sc= new Scanner(System.in);
+        HashSet<String> set = new HashSet<>();
+        while (sc.hasNextLine()){
+            String liaoLi = sc.nextLine();
+            String[] caiLiao = liaoLi.split(" ");
+            for (String zhongLei : caiLiao){
+                set.add(zhongLei);
+            }
+        }
+        System.out.println(set.size());
     }
 
 }
