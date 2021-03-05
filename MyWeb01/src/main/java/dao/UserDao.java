@@ -3,20 +3,51 @@ package dao;
 import entity.User;
 import util.DBUtil;
 
+import javax.servlet.ServletContext;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class UserDao {
+    //------------------------------重写方法 start---------------------------------------
+    public int add(User user, ServletContext context){
+        Connection con = null;
+        PreparedStatement ps = null;
+        int rs = 0;
+        Map map = (Map) context.getAttribute("key1");
+        Iterator iterator = map.keySet().iterator();
+        while (iterator.hasNext()){
+            con = (Connection) iterator.next();
+            if ((Boolean) map.get(con)){
+                map.put(con,false);
+                break;
+            }
+        }
+        try {
+            String  sql = "insert into users(users_name, users_password) values (?,?);";
+            ps = con.prepareStatement(sql);
+            ps.setString(1,user.getName());
+            ps.setString(2,user.getPassword());
+            rs = ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            map.put(con,true);
+            DBUtil.Close(con,ps);
+        }
+        return rs;
+    }
+
+    //-----------------------------------end--------------------------------------------
 
     public int add(User user){
         int rs = 0;
         Connection connection = null;
         PreparedStatement ps = null;
         try {
+            Date date = new Date();
             connection = DBUtil.getConnection();
             String  sql = "insert into users(users_name, users_password) values (?,?);";
             ps = connection.prepareStatement(sql);
