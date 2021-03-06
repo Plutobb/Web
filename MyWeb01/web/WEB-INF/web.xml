@@ -42,5 +42,14 @@
     <listener>
         <listener-class>Listener.Listener</listener-class>
     </listener>
-
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>filter.filter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/user/find</url-pattern>
+        <url-pattern>/user/add</url-pattern>
+        <url-pattern>/user/delete</url-pattern>
+    </filter-mapping>
 </web-app>
