@@ -35,7 +35,6 @@ public class UserDao {
             throwables.printStackTrace();
         } finally {
             map.put(con,true);
-            DBUtil.Close(con,ps);
         }
         return rs;
     }

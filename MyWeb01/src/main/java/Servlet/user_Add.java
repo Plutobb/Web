@@ -3,6 +3,7 @@ package Servlet;
 import dao.UserDao;
 import entity.User;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +25,9 @@ public class user_Add extends HttpServlet {
         passWord = request.getParameter("passWord");
         user = new User(null,userName,passWord);
 
-        int  result = userDao.add(user);
+        ServletContext context = request.getServletContext();
+
+        int  result = userDao.add(user,context);
         response.setContentType("Text/html;charset=utf-8");
         response.setCharacterEncoding("utf-8");
         PrintWriter pw = response.getWriter();
