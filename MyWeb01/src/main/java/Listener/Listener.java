@@ -15,6 +15,7 @@ public class Listener implements ServletContextListener {
         Boolean flag = true;
         for (int i = 0; i < 20; i++) {
             Connection con = DBUtil.getConnection();
+            System.out.println("链接通道建立" + con);
             map.put(con,flag);
         }
         ServletContext servletContext = servletContextEvent.getServletContext();
@@ -22,6 +23,6 @@ public class Listener implements ServletContextListener {
     }
 
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
-
+        System.out.println("链接通道关闭!");
     }
 }

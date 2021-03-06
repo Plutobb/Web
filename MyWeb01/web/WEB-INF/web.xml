@@ -38,5 +38,9 @@
         <servlet-name>userDeleteServlet</servlet-name>
         <url-pattern>/user/delete</url-pattern>
     </servlet-mapping>
+    
+    <listener>
+        <listener-class>Listener.Listener</listener-class>
+    </listener>
 
 </web-app>
