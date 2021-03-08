@@ -11,9 +11,11 @@ public class test1 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         //test1 test1 = new test1();
         InnerStaticClass innerStaticClass = new InnerStaticClass();
+        System.out.println(ClassLoader.getSystemClassLoader());
+        Class<?> aClass = Class.forName("InnerStaticClass");
     }
 
 }
