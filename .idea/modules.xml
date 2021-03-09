@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestDatabase/TestDatabase.iml" filepath="$PROJECT_DIR$/TestDatabase/TestDatabase.iml" />
       <module fileurl="file://$PROJECT_DIR$/Thread/Thread.iml" filepath="$PROJECT_DIR$/Thread/Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/regex/regex.iml" filepath="$PROJECT_DIR$/regex/regex.iml" />
       <module fileurl="file://$PROJECT_DIR$/SusheGuanLi/susheguanli.iml" filepath="$PROJECT_DIR$/SusheGuanLi/susheguanli.iml" />
     </modules>
   </component>
