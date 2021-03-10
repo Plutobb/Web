@@ -145,6 +145,7 @@ public class test extends JFrame{
     }
 
     public static void main(String[] args) {
-
+        char ch = '中';
+        System.out.println(ch);
     }
 }
