@@ -145,7 +145,14 @@ public class test extends JFrame{
     }
 
     public static void main(String[] args) {
-        char ch = '中';
-        System.out.println(ch);
+//        char ch = '中';
+//        System.out.println(ch);
+        ok:
+        for (int i = 0; i < 10; i++) {
+            for (int i1 = 0; i1 < 10; i1++) {
+                System.out.println(1);
+                    break ok;
+            }
+        }
     }
 }
