@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页标题</title>
+</head>
+<script src="jquery-1.9.1.min.js"></script>
+<script>
+    function myck(type){
+        var num1 = jQuery("#num1");
+        var num2 = jQuery("#num2");
+        if(type==1){
+            // 计算操作
+            var result = parseInt(num1.value) + parseInt(num2.value);
+            alert(result);
+            document.getElementById("resultDiv").innerText ="最终计算结果："+
+                result;
+        }else if(type==2){
+            if(confirm("是否正确清空？")){
+                // 清空
+                num1.value = "";
+                num2.value = "";
+                document.getElementById("resultDiv").innerText="";
+            }
+        }
+    }
+</script>
+</head>
+<body>
+<div style="margin-top: 100px;margin-left: 500px;">
+    <span style="font-size: 60px;">加法计算器</span>
+</div>
+<div>
+    <div class="innerDiv">
+        数字1：<input id="num1" type="number" placeholder="请输入数字1">
+    </div>
+</div>
+<div>
+    <div class="innerDiv">
+        数字2：<input id="num2" type="number" placeholder="请输入数字2">
+    </div>
+</div>
+<div>
+    <div style="margin-left: 482px;" class="innerDiv">
+        <input type="button" onclick="myck(1)" value="计 算">
+        <input type="button" onclick="myck(2)" value="清 空">
+    </div>
+</div>
+<div id="resultDiv">
+
+</div>
+</body>
+<style>
+    .innerDiv{
+        margin-left: 420px;
+        margin-top: 20px;
+    }
+</style>
+
+</html>
