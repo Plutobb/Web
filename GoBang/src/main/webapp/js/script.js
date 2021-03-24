@@ -38,7 +38,7 @@ function setScreenText(me) {
 // 初始化 websocket 
 //////////////////////////////////////////////////
 
-var websocket = new WebSocket("ws://39.99.133.224:8080/GoBang/game/" + gameInfo.userId);
+var websocket = new WebSocket("ws://localhost:8080/GoBang/game/" + gameInfo.userId);
 
 // 给 websocket 对象实现对应的方法
 websocket.onopen = function () {
