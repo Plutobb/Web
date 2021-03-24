@@ -6,13 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MyWeb01" />
-        <module name="Project_IDEA" />
-        <module name="TestDatabase" />
+        <module name="Blog" />
         <module name="susheguanli" />
+        <module name="Chess_Finish" />
+        <module name="MyWeb01" />
+        <module name="TestDatabase" />
+        <module name="GoBang" />
+        <module name="Project_IDEA" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Blog" target="1.8" />
+      <module name="Chess_Finish" target="1.8" />
+      <module name="GoBang" target="1.8" />
       <module name="MyWeb01" target="1.5" />
       <module name="Project_IDEA" target="1.5" />
       <module name="susheguanli" target="1.8" />

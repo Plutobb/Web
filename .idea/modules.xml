@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Blog/Blog.iml" filepath="$PROJECT_DIR$/Blog/Blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chess_Finish/Chess_Finish.iml" filepath="$PROJECT_DIR$/Chess_Finish/Chess_Finish.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cookies/Cookies.iml" filepath="$PROJECT_DIR$/Cookies/Cookies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GoBang/GoBang.iml" filepath="$PROJECT_DIR$/GoBang/GoBang.iml" />
       <module fileurl="file://$PROJECT_DIR$/JDK1.8Test/JDK1.8Test.iml" filepath="$PROJECT_DIR$/JDK1.8Test/JDK1.8Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyWeb01/MyWeb01.iml" filepath="$PROJECT_DIR$/MyWeb01/MyWeb01.iml" />
