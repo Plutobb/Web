@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>欢迎来到莫秃博客!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+    <link rel="stylesheet" href="./static/css/login.css">
 </head>
-<body>
 
+<body>
+    <form id="login_form">
+        <div id="login_box">
+            <h2>LOGIN </h2>
+                <div id="form">
+                    <div id="input_box">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input class="in" type="text" placeholder="userName" name="userName">
+                    </div>
+                    <div id="input_box">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                        <input class="in" type="passwoprd" placeholder="passWord" name="passWord">
+                    </div>
+                </div>
+                <button  onclick="login()">Sign in</button><br>
+            <div id="Sign">
+                <a href="a">忘记密码?</a>
+            </div>
+        </div>
+    </form>
 </body>
+<script type="text/javascript">
+
+    function login() {
+        var submit = document.getElementById("login_form");
+        submit.action = "./user/login";
+        submit.submit();
+    }
+    
+</script>
 </html>
