@@ -5,10 +5,12 @@ import frank.util.DBUtil;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
 
+@WebListener
 public class Listener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {

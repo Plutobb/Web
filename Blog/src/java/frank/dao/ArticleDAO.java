@@ -58,8 +58,8 @@ public class ArticleDAO {
     public static int insert(Article article,ServletContext context) {
         Connection c = null;
         PreparedStatement ps = null;
+        Map map = (Map) context.getAttribute("key1");
         try {
-            Map map = (Map) context.getAttribute("key1");
             Iterator iterator = map.keySet().iterator();
             while (iterator.hasNext()){
                 c = (Connection) iterator.next();
@@ -81,7 +81,7 @@ public class ArticleDAO {
         } catch (Exception e) {
             throw new RuntimeException("插入文章出错，一般都是自己sql写错了，或方法调用出错", e);
         } finally {//5.释放资源
-            DBUtil.close(c, ps);
+            map.put(c,true);
         }
     }
 
@@ -90,8 +90,8 @@ public class ArticleDAO {
         Connection c = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
+        Map map = (Map) context.getAttribute("key1");
         try {
-            Map map = (Map) context.getAttribute("key1");
             Iterator iterator = map.keySet().iterator();
             while (iterator.hasNext()){
                 c = (Connection) iterator.next();
@@ -122,15 +122,15 @@ public class ArticleDAO {
         } catch (Exception e) {
             throw new RuntimeException("查询文章详情出错，一般都是自己sql写错了，或方法调用出错", e);
         } finally {//5.释放资源
-            DBUtil.close(c, ps, rs);
+            map.put(c,true);
         }
     }
 
     public static int update(Article article,ServletContext context) {
         Connection c = null;
         PreparedStatement ps = null;
+        Map map = (Map) context.getAttribute("key1");
         try {
-            Map map = (Map) context.getAttribute("key1");
             Iterator iterator = map.keySet().iterator();
             while (iterator.hasNext()){
                 c = (Connection) iterator.next();
@@ -151,15 +151,15 @@ public class ArticleDAO {
         } catch (Exception e) {
             throw new RuntimeException("修改文章出错，一般都是自己sql写错了，或方法调用出错", e);
         } finally {//5.释放资源
-            DBUtil.close(c, ps);
+            map.put(c,true);
         }
     }
 
     public static int delete(int[] ids,ServletContext context) {
         Connection c = null;
         PreparedStatement ps = null;
+        Map map = (Map) context.getAttribute("key1");
         try {
-            Map map = (Map) context.getAttribute("key1");
             Iterator iterator = map.keySet().iterator();
             while (iterator.hasNext()){
                 c = (Connection) iterator.next();
@@ -188,7 +188,7 @@ public class ArticleDAO {
         } catch (Exception e) {
             throw new RuntimeException("删除文章出错，一般都是自己sql写错了，或方法调用出错", e);
         } finally {//5.释放资源
-            DBUtil.close(c, ps);
+            map.put(c,true);
         }
     }
 
