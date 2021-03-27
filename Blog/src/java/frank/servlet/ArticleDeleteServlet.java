@@ -16,7 +16,7 @@ public class ArticleDeleteServlet extends AbstractBaseServlet {
         for(int i=0; i<idsArray.length; i++){
             ids[i] = Integer.parseInt(idsArray[i]);
         }
-        int num = ArticleDAO.delete(ids);
+        int num = ArticleDAO.delete(ids,req.getServletContext());
         return null;
     }
 }

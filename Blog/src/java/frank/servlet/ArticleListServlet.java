@@ -14,7 +14,7 @@ public class ArticleListServlet extends AbstractBaseServlet {
     public Object process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         String id = req.getParameter("id");//获取前端数据，用户id
         //jdbc操作：查询文章列表（根据用户id查询关联的所有文章）
-        List<Article> articles = ArticleDAO.query(Integer.parseInt(id));
+        List<Article> articles = ArticleDAO.query(Integer.parseInt(id),req.getServletContext());
         return articles;
     }
 }

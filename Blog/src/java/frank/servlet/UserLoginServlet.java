@@ -19,7 +19,7 @@ public class UserLoginServlet extends AbstractBaseServlet {
         User user = new User(userName,passWord);
         HttpSession session = req.getSession();
         session.setAttribute(userName,user);
-        boolean isContainsUser = UserDao.login(userName,passWord);
+        boolean isContainsUser = UserDao.login(userName,passWord,req.getServletContext());
         if (isContainsUser){//存在用户的话转到主页
                 resp.sendRedirect("http://localhost:8080/Blog/jsp/articleList.jsp");
         }else {//不存在提示用户不存在或者密码错误

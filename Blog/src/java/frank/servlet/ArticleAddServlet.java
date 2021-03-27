@@ -13,7 +13,7 @@ public class ArticleAddServlet extends AbstractBaseServlet {
     @Override
     public Object process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         Article article = JSONUtil.deserialize(req.getInputStream(), Article.class);
-        int num = ArticleDAO.insert(article);
+        int num = ArticleDAO.insert(article,req.getServletContext());
         if(num != 1){
             throw new RuntimeException("插入文章数量异常");
         }

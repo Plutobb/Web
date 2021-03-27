@@ -12,7 +12,7 @@ public class ArticleDetailServlet extends AbstractBaseServlet {
     @Override
     public Object process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         String id = req.getParameter("id");
-        Article article = ArticleDAO.queryById(Integer.parseInt(id));
+        Article article = ArticleDAO.queryById(Integer.parseInt(id),req.getServletContext());
         if(article == null)
             throw new RuntimeException("查询文章详情出错：id="+id);
         return article;
