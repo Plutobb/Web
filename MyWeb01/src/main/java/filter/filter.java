@@ -3,11 +3,13 @@ package filter;
 import entity.User;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+@WebFilter
 public class filter implements Filter{
 
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -26,7 +28,7 @@ public class filter implements Filter{
             //失败就重定向到登录页面
             System.out.println("用户被拦截");
             HttpServletResponse response = (HttpServletResponse) servletResponse;
-            response.sendRedirect("/myWeb/login.html");
+            response.sendRedirect("/Blog/index.html");
         }
     }
 
