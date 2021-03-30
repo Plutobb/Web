@@ -12,13 +12,15 @@
         <module name="MyWeb01" />
         <module name="TestDatabase" />
         <module name="GoBang" />
-        <module name="Project_IDEA" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Blog" target="1.8" />
       <module name="Chess_Finish" target="1.8" />
       <module name="GoBang" target="1.8" />
+      <module name="Mybaits" target="1.5" />
+      <module name="MybaitsTest" target="1.5" />
+      <module name="Mybatis" target="1.5" />
       <module name="MyWeb01" target="1.5" />
       <module name="Project_IDEA" target="1.5" />
       <module name="susheguanli" target="1.8" />
