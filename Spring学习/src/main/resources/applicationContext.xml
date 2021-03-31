@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Hello" class="mopo.pojo.Hello">
+        <property name="str" value="hello Spring" />
+    </bean>
+
+    <bean id="Address" class="mopo.pojo.Address">
+        <property name="address" value="西安"/>
+    </bean>
+
+    <bean id="SetContext" class="mopo.pojo.Student">
+        <!-- 普通注入 -->
+        <property name="name" value="张洪宝" />
+        <!-- bean注入-->
+        <property name="address" ref="Address"/>
+        <!-- 数组注入       -->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+        <!-- List注入       -->
+        <property name="list">
+            <list>
+                <value>打篮球</value>
+                <value>唱歌</value>
+                <value>敲代码</value>
+            </list>
+        </property>
+        <!-- Map注入       -->
+        <property name="map">
+            <map>
+                <entry key="学生卡" value="41100213256"/>
+                <entry key="银行卡" value="412545456100213256"/>
+            </map>
+        </property>
+        <!--空值注入-->
+        <property name="wifi">
+            <null/>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="drive">drive</prop>
+                <prop key="userName">root</prop>
+                <prop key="passWord">passWord</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
