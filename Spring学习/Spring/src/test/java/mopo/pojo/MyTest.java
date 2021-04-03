@@ -12,7 +12,6 @@ public class MyTest {
         Hello hello = (Hello) context.getBean("Hello");
         System.out.println(hello);
     }
-
     @Test
     public void Test2(){
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
