@@ -20,4 +20,6 @@ public interface BlogMapper {
     List<String> findGroupYear();
 
     List<Blog> findByYear(String year);
+
+    Blog findById(Long id);
 }

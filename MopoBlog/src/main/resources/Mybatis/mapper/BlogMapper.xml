@@ -6,4 +6,11 @@
     <select id="findAll" resultType="Blog">
         select * from t_blog
     </select>
+
+    <select id="findById" parameterType="Long" resultType="Blog">
+        select * from t_blog where id = #{id}
+    </select>
+
+
+
 </mapper>

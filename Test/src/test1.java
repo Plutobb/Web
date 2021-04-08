@@ -16,19 +16,25 @@ public class test1 {
     }
 
     public static void main(String[] args) throws ClassNotFoundException {
-        //test1 test1 = new test1();
-//        InnerStaticClass innerStaticClass = new InnerStaticClass();
-//        System.out.println(ClassLoader.getSystemClassLoader());
-//        Class<?> aClass = Class.forName("InnerStaticClass");
-        Thread thread1 = new Thread(()->{
-            print(1);
-        });
-        Thread thread2 = new Thread(()->{
-            print(2);
-        });
-        Thread thread3 = new Thread(()->{
-           print(3);
-        });
+//        //test1 test1 = new test1();
+////        InnerStaticClass innerStaticClass = new InnerStaticClass();
+////        System.out.println(ClassLoader.getSystemClassLoader());
+////        Class<?> aClass = Class.forName("InnerStaticClass");
+//        Thread thread1 = new Thread(()->{
+//            print(1);
+//        });
+//        Thread thread2 = new Thread(()->{
+//            print(2);
+//        });
+//        Thread thread3 = new Thread(()->{
+//           print(3);
+//        });
+
+    }
+
+    public static void StackOver(){
+        int i = 1;
+        StackOver();
     }
 
 }
