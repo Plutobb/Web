@@ -52,23 +52,24 @@ public class Main {
 //            String string = sc.nextLine();
 //            stringChoice(string);
 //        }
-        ListNode a = new  ListNode(1);
-        ListNode b = new  ListNode(2);
-        ListNode c = new  ListNode(3);
-        ListNode d = new  ListNode(4);
-        ListNode e = new  ListNode(5);
-        a.next = b;
-        b.next = c;
-        c.next = d;
-        d.next = e;
-
-        ListNode i = new  ListNode(1);
-        ListNode o = new  ListNode(3);
-        ListNode m = new  ListNode(6);
-        i.next = o;
-        o.next = m;
-
-        Merge(a,null);
-
+//        ListNode a = new  ListNode(1);
+//        ListNode b = new  ListNode(2);
+//        ListNode c = new  ListNode(3);
+//        ListNode d = new  ListNode(4);
+//        ListNode e = new  ListNode(5);
+//        a.next = b;
+//        b.next = c;
+//        c.next = d;
+//        d.next = e;
+//
+//        ListNode i = new  ListNode(1);
+//        ListNode o = new  ListNode(3);
+//        ListNode m = new  ListNode(6);
+//        i.next = o;
+//        o.next = m;
+//
+//        Merge(a,null);
+        StringBuilder string = new StringBuilder("001001");
+        System.out.println(string.delete(0,1));
     }
 }
