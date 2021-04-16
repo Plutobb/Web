@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>pwd</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="user:${users}">
+                        <td th:text="${user.getId()}"></td>
+                        <td th:text="${user.getName}"></td>
+                        <td th:text="${user.getPwd}"></td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+</body>
+</html>

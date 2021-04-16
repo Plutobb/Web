@@ -6,15 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Spring" />
         <module name="SpringBoot" />
+        <module name="Spring" />
         <module name="SpringMVC" />
+        <module name="mabatisPlus" />
+        <module name="BlogPlus" />
+        <module name="MyabtisPlus" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MyabtisPlus" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BlogPlus" options="-parameters" />
+      <module name="MyabtisPlus" options="-parameters" />
       <module name="SpringBoot" options="-parameters" />
+      <module name="mabatisPlus" options="-parameters" />
     </option>
   </component>
 </project>

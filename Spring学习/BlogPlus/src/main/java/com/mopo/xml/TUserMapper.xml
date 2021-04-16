@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mopo.mapper.TUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mopo.entity.TUser">
+        <id column="id" property="id" />
+        <result column="avatar" property="avatar" />
+        <result column="create_time" property="createTime" />
+        <result column="email" property="email" />
+        <result column="nickname" property="nickname" />
+        <result column="password" property="password" />
+        <result column="type" property="type" />
+        <result column="update_time" property="updateTime" />
+        <result column="username" property="username" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, avatar, create_time, email, nickname, password, type, update_time, username
+    </sql>
+
+</mapper>

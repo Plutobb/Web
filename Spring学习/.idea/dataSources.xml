@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/mySpringBlog</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="MybatisPlus" uuid="12990c5a-cdc7-47dd-aa8c-5b1566edf227">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/MybatisPlus</jdbc-url>
+    </data-source>
   </component>
 </project>
