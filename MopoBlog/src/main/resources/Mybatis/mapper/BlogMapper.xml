@@ -11,6 +11,13 @@
         select * from t_blog where id = #{id}
     </select>
 
+    <insert id="insertBlog" parameterType="Blog">
+        insert  into t_blog(content,description,title,first_picture,appreciation,commentabled,published,recommend,share_statement)
+values (#{content},#{description},#{title},#{firstpicture},1,1,1,1,1);
+    </insert>
 
+    <delete id="deleteBlog" parameterType="Long">
+        delete from t_blog where id = #{id}
+    </delete>
 
 </mapper>

@@ -22,4 +22,8 @@ public interface BlogMapper {
     List<Blog> findByYear(String year);
 
     Blog findById(Long id);
+
+    Integer insertBlog(Blog blog);
+
+    Integer deleteBlog(Long id);
 }

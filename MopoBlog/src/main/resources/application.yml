@@ -7,4 +7,3 @@ spring:
 mybatis:
   mapper-locations: classpath:Mybatis/mapper/*.xml
   type-aliases-package: com.mopo.pojo
-

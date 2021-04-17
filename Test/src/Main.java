@@ -69,7 +69,20 @@ public class Main {
 //        o.next = m;
 //
 //        Merge(a,null);
-        StringBuilder string = new StringBuilder("001001");
-        System.out.println(string.delete(0,1));
+//        StringBuilder string = new StringBuilder("001001");
+//        System.out.println(string.delete(0,1));
+        System.out.println(testTry());
+    }
+
+    public static int testTry(){
+        int i = 10;
+        try {
+            i = 20;
+            return i;
+        }catch (Exception e){
+            return 30;
+        }finally {
+            i = 40;
+        }
     }
 }

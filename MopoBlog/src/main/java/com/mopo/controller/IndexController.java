@@ -16,7 +16,7 @@ public class IndexController {
     @Autowired
     private BlogMapper BlogMapper;
 
-    @GetMapping("/index")
+    @GetMapping("")
     public String index(Model model){
         List<Blog> allBlog = BlogMapper.findAll();
         for (Blog blog : allBlog) {
