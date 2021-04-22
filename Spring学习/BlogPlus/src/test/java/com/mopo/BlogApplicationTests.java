@@ -1,9 +1,13 @@
 package com.mopo;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.mopo.entity.TBlog;
+import com.mopo.entity.TType;
 import com.mopo.entity.TUser;
 import com.mopo.mapper.TBlogMapper;
+import com.mopo.mapper.TTypeMapper;
 import com.mopo.mapper.TUserMapper;
+import com.mopo.service.TTypeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,11 +20,16 @@ import java.util.Map;
 class BlogApplicationTests {
 
     @Autowired
-    private TBlogMapper mapper;
+    private TBlogMapper blogMapper;
 
     @Autowired
     private TUserMapper userMapper;
 
+    @Autowired
+    private TTypeMapper typeMapper;
+
+    @Autowired
+    TTypeService typeService;
     @Test
     void contextLoads() {
 //        Page<TBlog> page = new Page<>(2, 1);
@@ -34,10 +43,15 @@ class BlogApplicationTests {
 //
 //        List<TUser> tUsers = userMapper.selectList(queryWrapper);
 //        tUsers.forEach(System.out::println);
-        QueryWrapper<TUser> wrapper = new QueryWrapper<>();
-        wrapper.eq("username","admin");
-        TUser tUser = userMapper.selectOne(wrapper);
-        System.out.println(tUser);
+//        QueryWrapper<TBlog> wrapper = new QueryWrapper<>();
+//        wrapper.eq("type_id",1);
+//        TBlog tBlog = blogMapper.selectOne(wrapper);
+//        System.out.println(tBlog);
+
+        List<TType> types = typeService.list();
+        Long id = types.get(0).getId();
+        System.out.println(id);
+        types.forEach(System.out::println);
     }
 
 }

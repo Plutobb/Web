@@ -1,7 +1,10 @@
 package com.mopo.controller.admin;
 
 import com.mopo.entity.TBlog;
+import com.mopo.entity.TType;
 import com.mopo.mapper.TBlogMapper;
+import com.mopo.service.TBlogService;
+import com.mopo.service.TTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +23,8 @@ public class BlogController {
     @Autowired
     private TBlogMapper blogMapper;
 
+    @Autowired
+    private TTypeService typeService;
 
     //查询博客
     @GetMapping("/blogs")
@@ -33,7 +38,9 @@ public class BlogController {
     @GetMapping("/blogs/input")
     public String inputBlog(Model model){
         //进入新增博客页面
-        Model blog = model.addAttribute("blog", new TBlog());
+        List<TType> types = typeService.list();
+        model.addAttribute("blog", new TBlog());
+        model.addAttribute("types",types);
         return "admin/blog-input";
     }
 
@@ -41,6 +48,7 @@ public class BlogController {
     @PostMapping("/blogs")
     public String insertBlog(TBlog blog, RedirectAttributes redirectAttributes){
         if (blog != null){
+            System.out.println(blog.getTypeId());
             int  b = blogMapper.insert(blog);
             if (b == 1){
                 redirectAttributes.addFlashAttribute("message","新增成功!");

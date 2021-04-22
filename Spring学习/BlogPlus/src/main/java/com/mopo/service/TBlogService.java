@@ -1,5 +1,7 @@
 package com.mopo.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mopo.entity.TBlog;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +15,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface TBlogService extends IService<TBlog> {
 
+    Page<TBlog> selectPage(Page<TBlog> page);
+
+    TBlog selectById(Long id);
+
+    Page<TBlog> selectPage(Page<TBlog> page, QueryWrapper<TBlog> wrapper);
 }
