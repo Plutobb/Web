@@ -8,7 +8,9 @@
     <artifactId>Project_IDEA</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
+    <modules>
+        <module>Redis学习</module>
+    </modules>
 
 
 </project>

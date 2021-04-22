@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/gobang/ChessBean.class" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gobang/GoBangFrame.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gobang/GoBangPanel.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gobang/GoBangTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gobang/GoBangUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gobangAi/ChessBean.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gobangAi/GoBangFrame.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gobangAi/GoBangPanel.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/gobangAi/GoBangTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/wuziqiAi/src/ChessBean.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/wuziqiAi/src/GoBangTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wuziqiAi/src/GoBangUtil.java" charset="GBK" />
+  </component>
+</project>

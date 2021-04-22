@@ -3,7 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Blog" />
     <file type="web" url="file://$PROJECT_DIR$/Chess_Finish" />
-    <file type="web" url="file://$PROJECT_DIR$/GoBang" />
+    <file type="web" url="file://$PROJECT_DIR$/GoBangWeb" />
     <file type="web" url="file://$PROJECT_DIR$/SusheGuanLi" />
   </component>
   <component name="JavaScriptSettings">

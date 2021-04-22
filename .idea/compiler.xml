@@ -7,23 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Redis学习" />
         <module name="Blog" />
         <module name="susheguanli" />
         <module name="Chess_Finish" />
         <module name="MyWeb01" />
         <module name="TestDatabase" />
-        <module name="GoBang" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Blog" target="1.8" />
       <module name="Chess_Finish" target="1.8" />
-      <module name="GoBang" target="1.8" />
+      <module name="GoBangWeb" target="1.8" />
       <module name="Mybaits" target="1.5" />
       <module name="MybaitsTest" target="1.5" />
       <module name="Mybatis" target="1.5" />
       <module name="MyWeb01" target="1.5" />
       <module name="Project_IDEA" target="1.5" />
+      <module name="Redis学习" target="1.5" />
       <module name="susheguanli" target="1.8" />
       <module name="TestDatabase" target="1.5" />
     </bytecodeTargetLevel>

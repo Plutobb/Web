@@ -5,20 +5,25 @@
       <module fileurl="file://$PROJECT_DIR$/Blog/Blog.iml" filepath="$PROJECT_DIR$/Blog/Blog.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chess_Finish/Chess_Finish.iml" filepath="$PROJECT_DIR$/Chess_Finish/Chess_Finish.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cookies/Cookies.iml" filepath="$PROJECT_DIR$/Cookies/Cookies.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GoBang/GoBang.iml" filepath="$PROJECT_DIR$/GoBang/GoBang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GoBangBangBang-master/GoBangBangBang-master.iml" filepath="$PROJECT_DIR$/GoBangBangBang-master/GoBangBangBang-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/JDK1.8Test/JDK1.8Test.iml" filepath="$PROJECT_DIR$/JDK1.8Test/JDK1.8Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyWeb01/MyWeb01.iml" filepath="$PROJECT_DIR$/MyWeb01/MyWeb01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Mybatis/Mybaits.iml" filepath="$PROJECT_DIR$/Mybatis/Mybaits.iml" />
       <module fileurl="file://$PROJECT_DIR$/Mybatis/Mybatis.iml" filepath="$PROJECT_DIR$/Mybatis/Mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project_IDEA.iml" filepath="$PROJECT_DIR$/Project_IDEA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Redis学习/Redis学习.iml" filepath="$PROJECT_DIR$/Redis学习/Redis学习.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwordFingerOffer/SwordFingerOffer.iml" filepath="$PROJECT_DIR$/SwordFingerOffer/SwordFingerOffer.iml" />
       <module fileurl="file://$PROJECT_DIR$/TCP_UDP/TCP_UDP.iml" filepath="$PROJECT_DIR$/TCP_UDP/TCP_UDP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestDatabase/TestDatabase.iml" filepath="$PROJECT_DIR$/TestDatabase/TestDatabase.iml" />
       <module fileurl="file://$PROJECT_DIR$/Thread/Thread.iml" filepath="$PROJECT_DIR$/Thread/Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WuZiQiTest/WuZiQiTest.iml" filepath="$PROJECT_DIR$/WuZiQiTest/WuZiQiTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gobang/gobang.iml" filepath="$PROJECT_DIR$/gobang/gobang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gobangAi/gobangAi.iml" filepath="$PROJECT_DIR$/gobangAi/gobangAi.iml" />
       <module fileurl="file://$PROJECT_DIR$/regex/regex.iml" filepath="$PROJECT_DIR$/regex/regex.iml" />
       <module fileurl="file://$PROJECT_DIR$/SusheGuanLi/susheguanli.iml" filepath="$PROJECT_DIR$/SusheGuanLi/susheguanli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wuziqiAi/wuziqiAi.iml" filepath="$PROJECT_DIR$/wuziqiAi/wuziqiAi.iml" />
     </modules>
   </component>
 </project>
