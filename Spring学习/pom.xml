@@ -11,6 +11,7 @@
     <modules>
         <module>Spring</module>
         <module>MyabtisPlus</module>
+        <module>Spring整合Redis</module>
     </modules>
 
     <dependencies>

@@ -3,6 +3,7 @@ package com.mopo.mapper;
 import com.mopo.pojo.Blog;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
 @Mapper

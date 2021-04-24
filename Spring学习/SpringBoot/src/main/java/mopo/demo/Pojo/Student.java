@@ -9,9 +9,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
 @Data
-@Component
-@ConfigurationProperties(prefix = "student")
-@Validated
 public class Student {
     @NotNull
     private String name;

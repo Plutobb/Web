@@ -1,3 +1,4 @@
-student:
-  name: 张洪宝
-  age: 20
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379

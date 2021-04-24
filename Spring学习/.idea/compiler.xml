@@ -10,6 +10,7 @@
         <module name="Spring" />
         <module name="SpringMVC" />
         <module name="mabatisPlus" />
+        <module name="Spring整合Redis" />
         <module name="BlogPlus" />
         <module name="MyabtisPlus" />
       </profile>
