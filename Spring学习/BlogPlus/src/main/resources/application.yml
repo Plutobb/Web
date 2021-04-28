@@ -4,3 +4,9 @@ spring:
         url: jdbc:mysql://localhost:3306/mySpringBlog
         username: root
         password: root
+    redis:
+        host: 127.0.0.1
+        port: 6379
+logging:
+    level:
+        com.mopo.mapper: debug

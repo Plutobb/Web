@@ -29,4 +29,9 @@ public class TTypeServiceImpl extends ServiceImpl<TTypeMapper, TType> implements
     public List<TType> list() {
         return typeMapper.selectList(null);
     }
+
+    public List<TType> getTypesAndBlogsCount(){
+        return typeMapper.getTypesAndBlogCount();
+    }
+
 }

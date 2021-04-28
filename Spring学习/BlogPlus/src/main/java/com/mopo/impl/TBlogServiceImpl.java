@@ -9,6 +9,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -37,5 +39,15 @@ public class TBlogServiceImpl extends ServiceImpl<TBlogMapper, TBlog> implements
     @Override
     public Page<TBlog> selectPage(Page<TBlog> page, QueryWrapper<TBlog> wrapper) {
         return blogMapper.selectPage(page, wrapper);
+    }
+
+    @Override
+    public List<TBlog> selectBlogAndTypeNameById(QueryWrapper<TBlog> wrapper) {
+        return blogMapper.findBlogAndTypeNameById(wrapper);
+    }
+
+    @Override
+    public List<TBlog> list() {
+        return blogMapper.findBlogAndTypeNameById(null);
     }
 }

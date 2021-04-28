@@ -2,9 +2,8 @@ package com.mopo.controller.admin;
 
 import com.mopo.entity.TBlog;
 import com.mopo.entity.TType;
+import com.mopo.impl.TTypeServiceImpl;
 import com.mopo.mapper.TBlogMapper;
-import com.mopo.service.TBlogService;
-import com.mopo.service.TTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +23,7 @@ public class BlogController {
     private TBlogMapper blogMapper;
 
     @Autowired
-    private TTypeService typeService;
+    private TTypeServiceImpl typeService;
 
     //查询博客
     @GetMapping("/blogs")

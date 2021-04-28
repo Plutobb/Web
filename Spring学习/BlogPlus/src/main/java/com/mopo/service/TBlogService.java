@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mopo.entity.TBlog;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -20,4 +22,7 @@ public interface TBlogService extends IService<TBlog> {
     TBlog selectById(Long id);
 
     Page<TBlog> selectPage(Page<TBlog> page, QueryWrapper<TBlog> wrapper);
+
+    List<TBlog> selectBlogAndTypeNameById(QueryWrapper<TBlog> wrapper);
+
 }

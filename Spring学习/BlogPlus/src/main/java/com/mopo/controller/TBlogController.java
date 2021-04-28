@@ -33,7 +33,7 @@ public class TBlogController {
 
     @GetMapping("")
     public String index(Model model){
-        List<TBlog> allBlogs = blogService.list();
+        List<TBlog> allBlogs = blogService.list(null);
         model.addAttribute("page",allBlogs);
         return "index";
     }
@@ -42,7 +42,6 @@ public class TBlogController {
     public String indexPage(Model model,@PathVariable("page") int page,@PathVariable("size") int size){
         System.out.println(page+"-"+size);
         Page<TBlog> pageBlog = new Page<>(page, size);
-        //Page<TBlog> tBlogPage = blogMapper.selectPage(pageBlog, null);
         Page<TBlog> blogPage = blogService.selectPage(pageBlog);
         List<TBlog> listBlog = blogPage.getRecords();
         System.out.println("listBlog"+listBlog);
