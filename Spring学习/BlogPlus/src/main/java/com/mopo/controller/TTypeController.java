@@ -58,14 +58,12 @@ public class TTypeController {
         String redisTypes = redisTemplate.opsForValue().get("types");
         List<TType> types = null;
         if (redisTypes == null){
-            System.out.println("进入了数据库查询!");
             //如果从缓存中查不到则去数据库查询并写入缓存
             types = typeService.getTypesAndBlogsCount();
             String typesJSON = JSON.toJSONString(types);
             redisTemplate.opsForValue().set("types",typesJSON);
         }else {
             //如果从redis中查到了就直接返回
-            System.out.println("redis查到了!");
             types = JSON.parseArray(redisTypes,TType.class);
         }
         if (id == -1) {

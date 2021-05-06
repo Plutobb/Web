@@ -5,6 +5,7 @@ import com.mopo.entity.TType;
 import com.mopo.impl.TTypeServiceImpl;
 import com.mopo.mapper.TBlogMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +25,9 @@ public class BlogController {
 
     @Autowired
     private TTypeServiceImpl typeService;
+
+    @Autowired
+    RedisTemplate<String,String> redisTemplate;
 
     //查询博客
     @GetMapping("/blogs")
@@ -49,6 +53,7 @@ public class BlogController {
         if (blog != null){
             System.out.println(blog.getTypeId());
             int  b = blogMapper.insert(blog);
+            redisTemplate.delete("types");
             if (b == 1){
                 redirectAttributes.addFlashAttribute("message","新增成功!");
             }else {
@@ -62,6 +67,7 @@ public class BlogController {
     @RequestMapping("/blogs/{id}/delete")
     public String deleteBlog(@PathVariable Long id, RedirectAttributes redirectAttributes){
         Integer b = blogMapper.deleteById(id);
+        redisTemplate.delete("types");
         redirectAttributes.addFlashAttribute("message","删除成功!");
         return "redirect:/admin/blogs";
     }
@@ -71,6 +77,7 @@ public class BlogController {
     @GetMapping("/blogs/{id}/input")
     public String inputBlog(@PathVariable Long id,Model model){
         TBlog blog = blogMapper.selectById(id);
+        redisTemplate.delete("types");
         model.addAttribute("blog",blog);
         return "admin/blog-input";
     }

@@ -21,6 +21,9 @@ public class TypeController {
     @Autowired
     TTypeServiceImpl typeService;
 
+    @Autowired
+    RedisTemplate<String,String> redisTemplate;
+
 
 
     @GetMapping("/types")
@@ -42,6 +45,8 @@ public class TypeController {
         //type新增提交
         if (type != null) {
             boolean save = typeService.save(type);
+            //数据库新增之后删除redis中的缓存;
+            redisTemplate.delete("types");
             if (save){
                 redirectAttributes.addFlashAttribute("message","新增成功!");
             }else {
@@ -54,6 +59,7 @@ public class TypeController {
     @GetMapping("types/{id}/delete")
     public String typesDelete(@PathVariable int id,RedirectAttributes redirectAttributes){
         boolean remove = typeService.removeById(id);
+        redisTemplate.delete("types");
         if (remove){
             redirectAttributes.addFlashAttribute("message","删除成功!");
         }else {
