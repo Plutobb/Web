@@ -31,26 +31,22 @@ public class ALiBABATest {
         if (y1-1 >=0 && arr[x1][y1-1] >= num1 && flag!=2){
             flag = 1;
             help(arr, x1, y1-1, x2, y2,n,m,flag,ans+1);
-            flag = 1;
-            help(arr, x1, y1+1, x2, y2,n,m,flag,ans-1);
+            help(arr, x1, y1+1, x2, y2,n,m,2,ans-1);
         }
         if (y1+1 < m && arr[x1][y1+1] >= num1&& flag!=1){
             flag = 2;
             help(arr, x1, y1+1, x2, y2, n, m,flag,ans+1);
-            flag = 2;
-            help(arr, x1, y1-1, x2, y2, n, m,flag,ans-1);
+            help(arr, x1, y1-1, x2, y2, n, m,1,ans-1);
         }
         if (x1+1 < n && arr[x1+1][y1] >= num1&& flag!=4){
             flag = 3;
             help(arr, x1+1, y1, x2, y2, n, m,flag,ans+1);
-            flag = 2;
-            help(arr, x1-1, y1, x2, y2, n, m,flag,ans-1);
+            help(arr, x1-1, y1, x2, y2, n, m,4,ans-1);
         }
         if (x1-1 >=0 && arr[x1-1][y1] >= num1&& flag!=3){
             flag = 4;
             help(arr, x1-1, y1, x2, y2, n, m,flag,ans+1);
-            flag = 4;
-            help(arr, x1+1, y1, x2, y2, n, m,flag,ans-1);
+            help(arr, x1+1, y1, x2, y2, n, m,3,ans-1);
         }
         return;
     }
