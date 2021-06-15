@@ -131,6 +131,7 @@ public class test extends JFrame{
             }
         });
         btn1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
@@ -144,15 +145,30 @@ public class test extends JFrame{
         setVisible(true);
     }
 
+    public static class staticParent{
+        public  void staticFather(){
+            System.out.println("父类的静态方法");
+        }
+    }
+
+    public static class staticSon extends staticParent{
+        @Override
+        public  void staticFather(){
+            System.out.println("子类重写的静态方法");
+        }
+    }
+
     public static void main(String[] args) {
 //        char ch = '中';
 //        System.out.println(ch);
-        ok:
-        for (int i = 0; i < 10; i++) {
-            for (int i1 = 0; i1 < 10; i1++) {
-                System.out.println(1);
-                    break ok;
-            }
-        }
+//        ok:
+//        for (int i = 0; i < 10; i++) {
+//            for (int i1 = 0; i1 < 10; i1++) {
+//                System.out.println(1);
+//                    break ok;
+//            }
+//        }
+        staticSon staticSon = new staticSon();
+        staticSon.staticFather();
     }
 }

@@ -92,12 +92,71 @@ public class Sort {
         }
     }
 
+    //快速排序
+    public static void quickSort(int[] a, int left, int right){
+        if (left >= right){
+            return;
+        }
+        int mid = quickSortHelp(a,left,right);
+        quickSort(a,left,mid-1);
+        quickSort(a,mid+1,right);
+    }
+
+    private static int quickSortHelp(int[] a, int left, int right) {
+        int flag = a[left];
+        int index = left;
+        while (left < right){
+            while (left < right && a[right] >= flag){
+                right--;
+            }
+            while (left < right && a[left] <= flag){
+                left++;
+            }
+            swap(a,left,right);
+        }
+        swap(a,index,left);
+        return left;
+    }
+
     public static void main(String[] args) {
-        int[] n = {1,5,3,4,8,9,1,0};
-        //intSort(n);
-        //shellSort(n);
-        //selectSort(n);
-        heapSort(n);
-        System.out.println(Arrays.toString(n));
+        int[] num = {4,7,5,3,2,8,6,1};
+        quickSort1(num,0,num.length-1);
+        System.out.println(Arrays.toString(num));
+    }
+    public static void quickSort1(int[] num,int left,int right){
+        if(left > right){
+            return;
+        }
+        int mid = quickSortHelp1(num,left,right);
+        quickSort(num,left,mid-1);
+        quickSort(num,mid+1,right);
+    }
+
+    public static int quickSortHelp1(int[] num,int left,int right){
+        int flag = num[left];
+        int index = left;
+        while(left < right){
+            while(left < right && num[right] >= flag){
+                right--;
+            }
+            while(left < right && num[left] <= flag){
+                left++;
+            }
+            swap1(num,left,right);
+        }
+        swap(num,index,left);
+        return left;
+    }
+
+    //堆排序;
+
+    public static void heapSort1(int[] arr){
+
+    }
+
+    public static void swap1(int[] num,int left,int right){
+        int tmp = num[left];
+        num[left]  = num[right];
+        num[right] = tmp;
     }
 }
