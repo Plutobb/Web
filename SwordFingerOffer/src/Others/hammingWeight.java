@@ -7,6 +7,7 @@ public class hammingWeight {
 
     private static int  hammingWeight1(int n ){
         System.out.println(n);
+
         return 0;
     }
 }
