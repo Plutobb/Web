@@ -21,7 +21,6 @@ public class jieyushui {
         for (int i = 0; i < n; i++) {
             ans += Math.min(leftMax[i],rightMax[i]) - height[i];
         }
-
         return ans;
     }
 
