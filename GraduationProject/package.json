@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "vue-fullpage.js": "^0.1.7",
+    "xgplayer": "^2.31.6"
+  },
+  "devDependencies": {
+    "videojs-contrib-hls": "^5.15.0"
+  }
+}

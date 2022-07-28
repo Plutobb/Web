@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "video.upload.path",
+      "type": "java.lang.String",
+      "description": "Description for video.upload.path."
+  }
+] }
